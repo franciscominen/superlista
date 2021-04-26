@@ -1,0 +1,54 @@
+@import "../../App.scss";
+@media (max-width: 900px) {
+
+    .navbar {
+        background-color: #F6F6F6;
+        width: 100%;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 0 0 30px 30px;
+
+        position: sticky;
+        z-index: 5;
+
+        .sections__container {
+            width: 100%;
+            padding: 5px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .nav-link {
+                width: 45%;
+                color: rgba(0, 0, 0, 0.904);
+                font-size: 23px;
+                font-weight: 400;
+                padding: 3px 10px 5px 10px;
+                vertical-align: middle;
+                border-radius: 7px;
+                text-align: center;
+            }
+            .navLink-active {
+                color: white;
+                background-color: #252525;
+                transition: .5s;
+
+            }
+            .divider {
+                height: 1.8em;
+                opacity: 0.5;
+            }
+            
+        }
+        .components__container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 0 10px;
+        }
+    }
+}
