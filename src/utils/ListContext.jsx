@@ -4,6 +4,12 @@ export const listContext = createContext();
 export const ListProvider = ({ children }) => {
 
     const [list, setList] = useState([]);
+
+    const [note, setNote] = useState('')
+    const noteChange = (e) => {
+        setNote(e.target.value);
+    }
+   
     const [searchTerm, setSearchTerm] = useState("");
 
         // Local Storage Get
@@ -60,7 +66,10 @@ export const ListProvider = ({ children }) => {
                 setList: setList,
                 searchTerm: searchTerm,
                 setSearchTerm: setSearchTerm,
-                removeItem: removeItem
+                removeItem: removeItem,
+                note: note,
+                setNote, setNote,
+                noteChange: noteChange
                 }}>
 
                 {children}

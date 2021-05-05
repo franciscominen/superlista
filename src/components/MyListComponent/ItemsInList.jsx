@@ -6,7 +6,7 @@ import ModalComponent from "../ProductCardComponent/DescripcionModal"
 
 const ItemsInList = () => {
 
-    const { list, removeItem } = useContext(listContext);
+    const { list, removeItem, note } = useContext(listContext);
 
     return (
         <>
@@ -22,7 +22,12 @@ const ItemsInList = () => {
 
                                     <div className='item_detail'>
                                         <img src={item.img} />
-                                        <h2>{item.name}</h2> 
+                                        <div className='descipt_container'> 
+                                            <h2>{item.name}</h2> 
+                                            <p style={{color:'grey', fontSize:'14px'}}>
+                                                {note}
+                                            </p>
+                                        </div>
                                     </div>
 
 
