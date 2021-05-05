@@ -42,3 +42,22 @@
     left: 45%;
     top: 50%;
 }
+
+.clearList_btn {
+    background: white;
+    border: none;
+    font-size: 26px;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.20);
+    display: flex;
+    padding: 13px;
+    border-radius: 100%;
+
+    position: fixed;
+    z-index: 3;
+    bottom: 20px;
+    left: 15px;
+
+    svg {
+        color: $colorPrincipal;
+    }
+}

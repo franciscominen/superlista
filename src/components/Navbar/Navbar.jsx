@@ -28,8 +28,11 @@ const Navbar = () => {
 
             <div className='components__container'>
                 <SearchComponent/>
-                <CategoriesComponent/>
             </div>
+            
+            <CategoriesComponent/>
+            
+            
         </nav>
     )
 }

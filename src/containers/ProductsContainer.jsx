@@ -3,6 +3,8 @@ import {useParams} from "react-router-dom";
 import {ProductList} from '../components/ProductList/ProductList';
 import {db} from "../firebaseConfig";
 import Loader from '../utils/Loader';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function ProductsContainer () {
@@ -34,13 +36,15 @@ export default function ProductsContainer () {
         })
   
       }, [categoriaId])
-    return (
+        return (
         <>
         { loading ? <Loader/>
         :
           
           <section className='products_container' style={{display:"flex", flexWrap:'wrap', justifyContent:'center', alignItems:'center', padding:'25px 0'}}>
               <ProductList items={productos}/>
+              
+              <ToastContainer/>
           </section>
         }
        

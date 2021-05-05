@@ -1,13 +1,26 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {ProductCard} from '../ProductCardComponent/ProductCard';
+import {listContext} from "../../utils/ListContext";
 
 export const ProductList = ({ items }) => {
+
+    const {searchTerm} = useContext(listContext)
+    
     return (
         <>
-            {items.map((item) => (
-            
-                <ProductCard key={item.id} item={item} />
-            
+            {items.filter((item) => {
+                if (searchTerm == "") {
+                    return item
+                } else if (item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    return item
+                }
+            }).map((item) => (
+                
+                <ProductCard 
+                    key={item.id} 
+                    item={item} 
+                />
+
             ))}
         </>
     )

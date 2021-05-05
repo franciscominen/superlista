@@ -1,0 +1,71 @@
+@import "../../App.scss";
+
+@media (max-width: 900px) {
+
+    .listProducts_container {
+        margin: 0 10px;
+
+        
+        .list_product {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            margin: 7px 0;
+            padding: 5px 10px;
+
+            border-radius: 10px;
+            box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.06);
+
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+
+            .item_detail {
+                display: flex;
+                align-items: center;
+
+                img {
+                    max-width: 40px;
+                    margin-right: 10px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            button {
+                background: none;
+                border: none;
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+        }
+    }
+
+    .fadeOut {
+        opacity: 0;
+    }
+
+    .item-enter {
+        opacity: 0;
+      }
+      .item-enter-active {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+      }
+      .item-exit {
+        opacity: 1;
+      }
+      .item-exit-active {
+        opacity: 0;
+        transition: opacity 500ms ease-in;
+      }
+      
+}

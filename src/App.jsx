@@ -4,21 +4,27 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './layout/Home';
 import ProductsContainer from './containers/ProductsContainer'
 import MyListContainer from './containers/MyListContainer';
+import { ListProvider } from './utils/ListContext';
 
 function App() {
   return (
     <>
       <Router>
 
-        <Navbar/>
+        <ListProvider> 
+          
+          <Navbar/>
 
-        <Switch>
+          <Switch>
 
-          <Route exact component={Home} path="/" />
-          <Route exact component={ProductsContainer} path="/productos" />
-          <Route exact component={MyListContainer} path="/mi-lista" />
+            <Route exact component={Home} path="/" />
+            <Route exact component={ProductsContainer} path="/productos" />
+            <Route exact component={ProductsContainer} path="/productos/:categoriaId" />
+            <Route exact component={MyListContainer} path="/mi-lista" />
 
-        </Switch>
+          </Switch>
+
+        </ListProvider> 
 
       </Router>      
     </>
