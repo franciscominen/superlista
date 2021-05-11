@@ -7,7 +7,7 @@ import ClearListBtn from '../utils/ClearListBtn';
 import {IoCartOutline} from "react-icons/io5"
 import { Animated } from 'react-animated-css';
 
-const MyListContainer = () => {
+const MyListContainer = ({item}) => {
 
     const { list } = useContext(listContext);
 
@@ -29,12 +29,9 @@ const MyListContainer = () => {
             </>
             :
             <>
-                {/* <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationOutDuration={500} className='item_inList'> */}
-                    <ItemsInList/>
-                    <ClearListBtn/>
-                {/* </Animated> */}
+                <ItemsInList item={item} key={item}/>
+                <ClearListBtn/>
             </>}
-            
         </> 
     )
 }

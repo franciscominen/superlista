@@ -10,12 +10,10 @@ import {listContext} from '../../utils/ListContext';
 
 
 const ModalComponent = ({item}) => {
-  /* const handleChange = (e) => {
-    setNote(e.target.value);
-  }
- */
-  // ADD ITEM
-    const {addItem, note, noteChange} = useContext(listContext);
+
+    // ADD ITEM
+    const {addItem, note, setNote, handleChange} = useContext(listContext);
+    
     const onAdd = () => {
       addItem(item)
     }
@@ -59,15 +57,13 @@ const ModalComponent = ({item}) => {
             </div>
 
             <div className="content">
-              
-              <textarea
-                placeholder={window.location.href === "http://localhost:3000/productos"
-                              ? "Agregue aqui una descripcion sobre este producto"
-                              : note }
+               
+              <textarea 
+                placeholder='Escriba aqui'
+                onChange={handleChange}
                 value={note}
-                onChange={noteChange}
               />        
-                
+
             </div>
 
             <div className='modal_footer' onClick={notify}>

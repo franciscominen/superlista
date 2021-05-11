@@ -8,13 +8,13 @@ export const ProductList = ({ items }) => {
     
     return (
         <>
-            {items.filter((item) => { // SEARCH 
+            { items.filter( item => { // SEARCH 
                 if (searchTerm == "") {
                     return item
                 } else if (item.name.toLowerCase().includes(searchTerm.toLowerCase())) {
                     return item
                 }
-            }).map((item) => ( 
+            }).map( item => ( 
                 
                 <ProductCard 
                     key={item.id} 

@@ -25,7 +25,7 @@ export const ProductCard = ({ item }) => {
     const onAdd = () => {
         addItem(item)
     }
-
+    
     return (
 
         <>
@@ -34,11 +34,12 @@ export const ProductCard = ({ item }) => {
 
                     <div className='btns_container'>
 
-                        <ModalComponent item={item}/>
+                        <ModalComponent item={item} key={item.id} />
                         
                         <button onClick={onAdd}>
                             <RiAddFill onClick={notify}/>
                         </button>
+
                     </div>
 
                     <img src={item.img} onerror="this.src='https://ctkbiotech.com/wp/wp-content/uploads/2018/03/not-available.jpg'"/>

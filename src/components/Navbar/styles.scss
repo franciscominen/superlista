@@ -2,7 +2,7 @@
 @media (max-width: 900px) {
 
     .navbar {
-        background-color: #F6F6F6;
+        background-color: $blanco;
         width: 100%;
         padding: 10px;
         padding-bottom: 0;
@@ -27,7 +27,7 @@
             .nav-link {
                 width: 45%;
                 color: rgba(0, 0, 0, 0.904);
-                font-size: 23px;
+                font-size: 20px;
                 font-weight: 400;
                 padding: 3px 10px 5px 10px;
                 vertical-align: middle;
@@ -35,14 +35,25 @@
                 text-align: center;
             }
             .navLink-active {
-                color: white;
-                background-color: #252525;
-                transition: .5s;
-
+                font-weight: 600;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
-            .divider {
-                height: 1.8em;
-                opacity: 0.5;
+            .divider-nav {
+                height: 30px;
+                width: 1px;
+                background: $colorPrincipal;
+                display: block;
+                unicode-bidi: -webkit-isolate;
+                unicode-bidi: isolate;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                margin-inline-start: auto;
+                margin-inline-end: auto;
+                overflow: auto;
+                border-style: none;
+                border-width: 0;
             }
             
         }
@@ -53,4 +64,26 @@
             padding: 10px 10px 0 10px;
         }
     }
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $colorPrincipal;
+    transition: width .3s;
+}
+.navLink-active::after {
+    content: '';
+    display: block;
+    width: 102px;
+    height: 2px;
+    background: $colorPrincipal;
+    transition: width .3s;
+}
+
+
+.nav-link:hover::after {
+    width: 102px;
 }

@@ -18,16 +18,19 @@
         background: none;
         border: none;
         width: 100%;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.596);
+        border-bottom: 1px solid $colorPrincipal;
         padding: 3px;
         outline: none;
         font-size: 17px;
+        font-weight: 400;
         color: $colorPrincipal;
     }
 
     ::placeholder {
         font-size: 17px;
         outline: none;
+        font-weight: 400;
+        color: $colorPrincipal;
     }
 }
 

@@ -12,7 +12,7 @@ const SearchComponent = () => {
             <input 
                 className='search'
                 type="text" 
-                placeholder='Buscar productos' 
+                placeholder='Buscar producto' 
                 onChange={event => {setSearchTerm(event.target.value)}}
             />
         </div>

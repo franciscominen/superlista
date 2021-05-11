@@ -24,7 +24,7 @@ const ItemsInList = () => {
                                         <img src={item.img} />
                                         <div className='descipt_container'> 
                                             <h2>{item.name}</h2> 
-                                            <p style={{color:'grey', fontSize:'14px'}}>
+                                            <p style={{color:'grey', fontSize:'14px'}} >
                                                 {note}
                                             </p>
                                         </div>
@@ -33,7 +33,7 @@ const ItemsInList = () => {
 
                                     <div style={{display:'flex'}}>
                                         
-                                        <ModalComponent item={item}/>
+                                        <ModalComponent item={item} key={item.id} />
                                     
                                         <button onClick={()=>{removeItem(item)}}>
                                             <IoCloseOutline style={{marginLeft:'10px'}}/>
@@ -46,13 +46,10 @@ const ItemsInList = () => {
                             </section>
                         </>
                     )
-
                 })}
-
         </div>
     </>
     )
 }
 
-export default ItemsInList
-
+export default ItemsInList;

@@ -5,11 +5,18 @@ export const ListProvider = ({ children }) => {
 
     const [list, setList] = useState([]);
 
-    const [note, setNote] = useState('')
-    const noteChange = (e) => {
-        setNote(e.target.value);
-    }
-   
+    const [note, setNote] = useState(
+         localStorage.getItem('note') || ''
+        );
+     
+        useEffect(() => {
+            localStorage.setItem('note', note);
+        }, [note]);
+        
+        const handleChange = (e) => {
+            setNote(e.target.value)
+        }
+
     const [searchTerm, setSearchTerm] = useState("");
 
         // Local Storage Get
@@ -69,7 +76,7 @@ export const ListProvider = ({ children }) => {
                 removeItem: removeItem,
                 note: note,
                 setNote, setNote,
-                noteChange: noteChange
+                handleChange: handleChange
                 }}>
 
                 {children}
