@@ -2,70 +2,55 @@
 
 @media (max-width: 900px) {
 
-    .listProducts_container {
-        margin: 0 10px;
+    .list_container {
+        display: flex;
+        flex-direction: column;
+        margin: 16px;
+    }
 
-        
-        .list_product {
-            width: 100%;
+    .producList_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 8px 0px;
+        padding: 16px 8px;
+        height: 70px;
+        border-radius: 20px;
+        background: $blanco;
 
+        .product_detail {
             display: flex;
-            justify-content: space-between;
-            margin: 7px 0;
-            padding: 5px 10px;
+            align-items: center;
 
-            border-radius: 10px;
-            box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.06);
-
-            -ms-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-
-            .item_detail {
-                display: flex;
-                align-items: center;
-
-                img {
-                    max-width: 40px;
-                    margin-right: 10px;
-                }
-
-                h2 {
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-            }
-
-            button {
-                background: none;
-                border: none;
-                font-size: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            img {
+                max-width: 50px;
                 
             }
 
+            h1 {
+                font-size: 18px;
+                font-weight: 600;
+                color: $colorPrincipal;
+            }
+            p {
+                font-size: 16px;
+                color: $gris;
+            }
         }
+        .btns_container {
+            display: flex;
+            padding: 0 8px;
+            .close_btn {
+                background: none;
+                border: none;
+                img {
+                    max-width: 21px;
+                }
+            }
+        }
+
     }
 
-    .fadeOut {
-        opacity: 0;
-    }
 
-    .item-enter {
-        opacity: 0;
-      }
-      .item-enter-active {
-        opacity: 1;
-        transition: opacity 500ms ease-in;
-      }
-      .item-exit {
-        opacity: 1;
-      }
-      .item-exit-active {
-        opacity: 0;
-        transition: opacity 500ms ease-in;
-      }
-      
 }

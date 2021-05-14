@@ -1,53 +1,32 @@
-import React, {useContext} from 'react';
-import "./styles.scss"
-import {RiAddFill} from "react-icons/ri";
-import {listContext} from "../../utils/ListContext";
-import { toast, Slide } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, {useContext, useState} from 'react';
+import "./styles.scss";
 import {Animated} from "react-animated-css";
-import ModalComponent from './DescripcionModal';
+import {listContext} from '../../utils/ListContext';
+import { NoteModalComponent } from './NoteModalComponent';
 
-export const ProductCard = ({ item }) => {
+export const ProductCard = ({ productCard, lista, setLista, productCards }) => {
 
-    const {addItem} = useContext(listContext)
+    const {id, name, img, nota} = productCard; /* Destructuring */
+    const {addItem} = useContext(listContext);
 
-    const notify = () => toast( `Se agregó ${item.name} a su lista.`, {
-        position: "bottom-center",
-        autoClose: 1500,
-        hideProgressBar: true,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        transition: Slide
-        });
-
-    const onAdd = () => {
-        addItem(item)
-    }
-    
     return (
+        <Animated animationIn="zoomIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationInDuration={500} >
 
-        <>
-            <Animated animationIn="zoomIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationInDuration={500} >
-                <div className='card_product' >
+            <div className='card_product' >
+                <div className='btns_container'>
+                   
+                    <NoteModalComponent productCard={productCard} lista={setLista} productCards={productCards} />
 
-                    <div className='btns_container'>
-
-                        <ModalComponent item={item} key={item.id} />
-                        
-                        <button onClick={onAdd}>
-                            <RiAddFill onClick={notify}/>
-                        </button>
-
-                    </div>
-
-                    <img src={item.img} onerror="this.src='https://ctkbiotech.com/wp/wp-content/uploads/2018/03/not-available.jpg'"/>
-
-                    <h1>{item.name}</h1>
+                    <button onClick={()=>addItem(productCard)}>
+                        <img alt='+' src={'assets/img/addIcon.svg'} /* onClick={notify} *//>
+                    </button>
 
                 </div>
-            </Animated>
-        </>
-    )  
-};
+
+                <img src={img} />
+                <h1>{name}</h1>
+
+            </div>
+        </Animated>
+    )
+}

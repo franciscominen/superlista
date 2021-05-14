@@ -9,9 +9,9 @@
     justify-content: flex-start;
     align-items: center;
 
-    svg{
-        font-size: 33px;
-        margin-right: 5px;
+    img {
+        margin-right: 8px;
+        max-width: 24px;
     }
 
     input {
@@ -22,7 +22,7 @@
         padding: 3px;
         outline: none;
         font-size: 17px;
-        font-weight: 400;
+        font-weight: 300;
         color: $colorPrincipal;
     }
 

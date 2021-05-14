@@ -41,9 +41,9 @@
                 align-items: center;
             }
             .divider-nav {
-                height: 30px;
+                height: 41px;
                 width: 1px;
-                background: $colorPrincipal;
+                background: rgba(0, 0, 0, 0.247);
                 display: block;
                 unicode-bidi: -webkit-isolate;
                 unicode-bidi: isolate;
@@ -61,7 +61,7 @@
             width: 100%;
             display: flex;
             justify-content: flex-start;
-            padding: 10px 10px 0 10px;
+            padding: 16px 8px 0 8px;
         }
     }
 }

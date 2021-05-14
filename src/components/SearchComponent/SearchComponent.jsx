@@ -1,19 +1,18 @@
 import React, {useContext} from 'react';
 import {listContext} from "../../utils/ListContext";
-import {BiSearch} from "react-icons/bi";
 
 const SearchComponent = () => {
    
-    const {setSearchTerm} = useContext(listContext)
+/*     const {setSearchTerm} = useContext(listContext) */
 
     return (
         <div className='search_container'>
-            <BiSearch/>
+            <img src={"assets/img/searchIcon.svg"} alt="" />
             <input 
                 className='search'
                 type="text" 
                 placeholder='Buscar producto' 
-                onChange={event => {setSearchTerm(event.target.value)}}
+               /*  onChange={event => {setSearchTerm(event.target.value)}} */
             />
         </div>
     )

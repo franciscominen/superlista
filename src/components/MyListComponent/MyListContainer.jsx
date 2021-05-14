@@ -1,19 +1,19 @@
 import React, {useContext} from 'react';
 import "./styles.scss";
-import ItemsInList from '../components/MyListComponent/ItemsInList';
-import {listContext} from "../utils/ListContext";
+import ItemsInList from './ItemsInList';
+import {listContext} from "../../utils/ListContext";
 import {Link} from "react-router-dom";
-import ClearListBtn from '../utils/ClearListBtn';
+import ClearListBtn from '../../utils/ClearListBtn';
 import {IoCartOutline} from "react-icons/io5"
 import { Animated } from 'react-animated-css';
 
-const MyListContainer = ({item}) => {
-
-    const { list } = useContext(listContext);
+const MyListContainer = () => {
+    
+    const { lista, clearList } = useContext(listContext); 
 
     return (
         <>   
-            {list.length === 0 ? 
+            {lista.length === 0 ? 
             <>
                 <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationOutDuration={500}>
                     <div className='emptyList_container'>
@@ -29,8 +29,10 @@ const MyListContainer = ({item}) => {
             </>
             :
             <>
-                <ItemsInList item={item} key={item}/>
-                <ClearListBtn/>
+                <section className='list_container'>
+                    <ItemsInList />
+                    <button onClick={clearList}>Clear List</button>
+                </section>
             </>}
         </> 
     )

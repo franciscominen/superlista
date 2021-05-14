@@ -3,12 +3,13 @@ import "./styles.scss";
 import {NavLink} from "react-router-dom";
 import CategoriesComponent from '../CategoriesComponent/CategoriesComponent';
 import SearchComponent from '../SearchComponent/SearchComponent';
+import ClearNotes from './ClearNotes';
 
-const Navbar = () => {
+const Navbar = ({productCard}) => {
     return (
         <nav className='navbar'>
 
-            <img src="assets/img/superlistaLogo.svg" alt="" style={{maxWidth:'134px', margin:'16px'}} />
+            <img src={"assets/img/superlistaLogo.svg"} alt="" style={{maxWidth:'114px', margin:'8px 0 24px 0'}} />
 
             <div className='sections__container'>
                     <NavLink 
@@ -37,11 +38,9 @@ const Navbar = () => {
                 <SearchComponent/>
             </div>
             
-            <CategoriesComponent/>
-            
-            
+            <CategoriesComponent productCard={productCard} />
+
         </nav>
     )
 }
-
 export default Navbar
