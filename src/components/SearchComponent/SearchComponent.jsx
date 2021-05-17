@@ -4,7 +4,7 @@ import "../../utils/styles.scss";
 
 const SearchComponent = () => {
    
-/*     const {setSearchTerm} = useContext(listContext) */
+    const {setSearchTerm} = useContext(listContext)
 
     return (
         <div className='search_container'>
@@ -13,7 +13,7 @@ const SearchComponent = () => {
                 className='search'
                 type="text" 
                 placeholder='Buscar producto' 
-               /*  onChange={event => {setSearchTerm(event.target.value)}} */
+                onChange={event => {setSearchTerm(event.target.value)}}
             />
         </div>
     )

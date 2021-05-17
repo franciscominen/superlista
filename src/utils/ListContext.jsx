@@ -4,38 +4,15 @@ import { db } from "../firebaseConfig";
 
 export const listContext = createContext();
 export const ListProvider = ({ children }) => {
-/* 
-    const [productCards, setProductCards] = useState([]);
-    const [isLoading, setIsloading] = useState([])
-    const {categoria} = useParams();
 
-        // Llamado a FIREBASE
-        useEffect(() => {
-  
-            setIsloading(true)
-      
-            const productList = db.collection("productos");
-      
-            const loadProductList = new Promise((resolve, reject) => {
-              productList.get().then((value) => {
-                  let aux = value.docs.map(e => {
-                      return { ...e.data(), id: e.id }
-                  })
-                  resolve(aux.sort((a, b) => { if (a.name < b.name) { return -1 }; if (a.name > b.name) { return 1 }; return 0 }));
-                })
-            });
-      
-            loadProductList.then((database) => {
-              const filterProductList = database.filter((e) => e.categoryId === categoria)
-              const result = (filterProductList.length === 0) ? database : filterProductList
-              setProductCards(result)
-              setIsloading(false)
-            })
-      
-          }, [categoria]) */
-        
+    const [overflowScroll, setOverflowScroll] = useState(false);
+
+    const handleClick = () => {
+        overflowScroll ? setOverflowScroll(false) : setOverflowScroll(true);
+    };
 
     const [lista, setLista] = useState([]); //Seria el cart
+    const [searchTerm, setSearchTerm] = useState(""); // Buscador
 
         // Local Storage Get
         useEffect(() => {
@@ -71,16 +48,17 @@ export const ListProvider = ({ children }) => {
     return (
         <>
             <listContext.Provider value={{
-/*                 productCards: productCards,
-                setProductCards: setProductCards, */
                 lista: lista,
                 setLista: setLista,
                 addItem: addItem,
                 removeItem: removeItem,
                 clearList: clearList,
-/*                 isLoading: isLoading,
-                setIsloading: setIsloading,
-                categoria: categoria */
+                overflowScroll: overflowScroll,
+                setOverflowScroll: setOverflowScroll,
+                handleClick: handleClick,
+                setSearchTerm: setSearchTerm,
+                searchTerm: searchTerm
+
             }}>
 
                 {children}

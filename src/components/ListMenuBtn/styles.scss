@@ -91,6 +91,7 @@
 }
 
 .modal_container-content {
+    position: absolute;
     top: 0!important;
     left: 0!important;
     width: 100%;
@@ -99,13 +100,13 @@
     .modal {
         position: relative;
         margin: auto;
-        background: white;
+        background: #FCFCFC;
         display: flex;
         flex-direction: column;
-        top: 35%;
+        top: 20%;
         padding: 24px 16px;
         width: 85%;
-        border-radius: 35px;
+        border-radius: 25px;
         .modalInfo_container {
             display: flex;
             justify-content: center;

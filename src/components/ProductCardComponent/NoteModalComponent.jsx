@@ -9,7 +9,7 @@ export const NoteModalComponent = ({productCard}) => {
   const {id, categoryId, name, img, nota} = productCard; 
   const [newNote, setNewNote] = useState(productCard.nota)
 
-  const {addItem} = useContext(listContext);
+  const {addItem, handleClick} = useContext(listContext);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -30,54 +30,47 @@ export const NoteModalComponent = ({productCard}) => {
   } 
 
   return (
-    <Popup trigger={<img className={window.location.href === 'http://localhost:3000/mi-lista' ? 'miList_noteIcon' : 'cardNote_icon'}
-    src={"https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FdescriptIcon.svg?alt=media&token=77f745e2-a217-46a4-bb94-d838d6148ebb"} alt="" />}
-    className='modal_container'>
+    <Popup trigger={<button className='modalMenu_btn'> 
+    <img
+    src={"https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FnoteIcon.svg?alt=media&token=687a8862-c227-46dc-8f0d-d5d1a3501483"} alt="" /> </button>} className='modal_container'>
 
       {close => (
+          
+        <Animated animationIn="zoomIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationInDuration={500} className='modal'>
 
-                <Animated animationIn="zoomIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationInDuration={500} className='modal'>
+          <img onClick={close} className='closeNoteModal' src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FcloseIcon.svg?alt=media&token=381af7d8-e5df-458d-958f-ea4ff23ab14c'} alt="" />
 
-                {/* <div className='modal'> */}
+          <div className='noteModalInfo_container'>
 
-                <img src={'assets/img/closeIcon.svg'} alt="" className='close_img' onClick={close}/>
-                <div className='product_container'>
-                    <img src={img} alt="" className='imgNote_modal'/>
-                    <h1>{name}</h1>
-                  </div>
-                <form className='modal_form' onSubmit={handleSubmit}>
+            <img src={img} alt="" />
+            <h1>{name}</h1>
+             
+          </div>
+          
+          <form className='formNote_container' onSubmit={handleSubmit}>
+            <input type="text" value={newNote} placeholder='Escriba aqui...' onChange={handleNoteChange}/>
+            { window.location.href === 'http://localhost:3000/productos' ? 
+              <button type='sumbit'className='guardar-btn' >Agregar a mi lista</button> :
+              <button type='sumbit'className='guardar-btn' >Guardar cambios</button>
+            }
+          </form>
 
-                  <input type="text" value={newNote} placeholder='Escriba aqui...' onChange={handleNoteChange}/>
-                  <button type='sumbit'className='guardar-btn' >Agregar a mi lista</button>
+        </Animated>
 
-                </form> 
-
-     
-
-                {/* </div> */}
-            
-            </Animated>
       )}
+
     </Popup>
   )
 }
 
-/* 
-        <div className='note_modal'>
-          <a className="close" onClick={close}>
-            &times;
-          </a>
+{/* <img src={'assets/img/closeIcon.svg'} alt="" className='close_img' onClick={close}/>
+<div className='product_container'>
+    <img src={img} alt="" className='imgNote_modal'/>
+    <h1>{name}</h1>
+  </div>
+<form className='modal_form' onSubmit={handleSubmit}>
 
-          <form className='modal_form' onSubmit={handleSubmit}>
+  <input type="text" value={newNote} placeholder='Escriba aqui...' onChange={handleNoteChange}/>
+  <button type='sumbit'className='guardar-btn' >Agregar a mi lista</button>
 
-            <div className='product_container'>
-              <img src={img} alt="" className='img_modal'/>
-              <h1>{name}</h1>
-            </div>
-
-            <input type="text" value={newNote} placeholder='Ecriba aqui' onChange={handleNoteChange}/>
-            <button type='sumbit'className='guardar-btn' >Agregar a mi lista</button>
-
-          </form> 
-
-        </div> */
+</form>  */}
