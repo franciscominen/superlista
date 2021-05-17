@@ -1,0 +1,63 @@
+@import "../App.scss";
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes move {
+    100% {transform: translateY(-8em);}
+}
+
+
+@media (max-width: 900px) {
+
+
+    .home {
+        background: white;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .logo_big {
+            position: absolute;
+            opacity: 0;
+            animation: fade .7s ease-in .5s forwards, move 1s ease 2s forwards;
+        }
+        .homeBtns_container {
+            display: flex;
+            .newList_btn {
+                width: 170px;
+                height: 140px;
+                background: #f8f8f8;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 16px;
+                margin: 8px;
+                color: $colorPrincipal;
+                border-radius: 20px;
+                img {
+                    position: relative;
+                    max-width: 50px;
+                    margin-bottom: 8px;
+                }
+    
+    
+            }
+        }
+
+    }
+
+}
+

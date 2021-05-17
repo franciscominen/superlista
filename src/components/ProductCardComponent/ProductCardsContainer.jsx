@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from "react-router-dom";
-import { listContext } from '../../utils/ListContext'
+import { ToastContainer } from 'react-toastify';
 import {ProductList} from './ProductList'
 import Loader from '../../utils/Loader'
 import { db } from '../../firebaseConfig'
@@ -39,10 +39,22 @@ const ProductCardsContainer = () => {
   return (
     <>
     { isLoading ? <Loader/> :
+      <>
+
+      {
+        categoria === undefined ? <h1 style={{color:'#232323', fontSize:'18px', fontWeight:'800', margin:'16px 16px 0 16px'}}>Productos</h1>
+        : <h1 style={{color:'#232323', fontSize:'18px', fontWeight:'800', margin:'16px 16px 0 16px', textTransform:'capitalize'}}>{categoria}</h1>
+      }  
+
+      {/* <h1 style={{color:'#232323', fontSize:'20px', fontWeight:'800', margin:'16px 16px 0 16px'}}>Productos</h1> */}
 
       <section className='products_container'>
+
+        <ToastContainer/>
         <ProductList productCards={productCards}/>
+        
       </section>
+      </>
     }
     </>
   )

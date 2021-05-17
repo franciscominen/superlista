@@ -3,9 +3,8 @@ import "./styles.scss";
 import ItemsInList from './ItemsInList';
 import {listContext} from "../../utils/ListContext";
 import {Link} from "react-router-dom";
-import ClearListBtn from '../../utils/ClearListBtn';
-import {IoCartOutline} from "react-icons/io5"
 import { Animated } from 'react-animated-css';
+import ListMenuBtn from '../ListMenuBtn/ListMenuBtn';
 
 const MyListContainer = () => {
     
@@ -17,12 +16,10 @@ const MyListContainer = () => {
             <>
                 <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationOutDuration={500}>
                     <div className='emptyList_container'>
-                        <IoCartOutline/>
-                        <h3>No hay productos en su lista</h3>
-                        <Link to="/productos">
-                            <button >
-                                Agregar productos
-                            </button>
+                        <span className='carita'> :( </span>
+                        <h1>Ups... Parece que todavía no agregaste nada</h1>
+                        <Link to="/productos" className='volverProductos_btn'>
+                            Agregar productos
                         </Link> 
                     </div>
                 </Animated>
@@ -31,7 +28,7 @@ const MyListContainer = () => {
             <>
                 <section className='list_container'>
                     <ItemsInList />
-                    <button onClick={clearList}>Clear List</button>
+                    <ListMenuBtn/>
                 </section>
             </>}
         </> 

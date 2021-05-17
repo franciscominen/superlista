@@ -18,12 +18,14 @@
         background: none;
         border: none;
         width: 100%;
-        border-bottom: 1px solid $colorPrincipal;
+        border: none;
+        border-bottom: 0.5px solid #232323;
+        border-radius: 0px;
         padding: 3px;
         outline: none;
         font-size: 17px;
         font-weight: 300;
-        color: $colorPrincipal;
+        color: #232323;
     }
 
     ::placeholder {
@@ -44,23 +46,4 @@
     position: absolute;
     left: 45%;
     top: 50%;
-}
-
-.clearList_btn {
-    background: white;
-    border: none;
-    font-size: 26px;
-    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.20);
-    display: flex;
-    padding: 13px;
-    border-radius: 100%;
-
-    position: fixed;
-    z-index: 3;
-    bottom: 20px;
-    left: 15px;
-
-    svg {
-        color: $colorPrincipal;
-    }
 }

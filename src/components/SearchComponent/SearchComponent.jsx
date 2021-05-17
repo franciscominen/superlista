@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {listContext} from "../../utils/ListContext";
+import "../../utils/styles.scss";
 
 const SearchComponent = () => {
    

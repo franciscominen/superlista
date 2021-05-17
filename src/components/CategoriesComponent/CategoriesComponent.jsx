@@ -12,11 +12,14 @@ export default function CategoriesComponent() {
     return (
       <>
         {isOpen 
-        ? <Button onClick={onToggle}><FaFilter fill='#252525'/></Button>
-        : <Button onClick={onToggle}><FaFilter fill='transparent' strokeWidth='40' stroke='#252525'/></Button> 
+        ? <Button onClick={onToggle}><img src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FfilterActive.svg?alt=media&token=4eed1656-b0e4-49d1-9234-9daea63bd91a'} alt="" style={{maxWidth:'29px'}}/></Button>
+        : <Button onClick={onToggle}><img src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2Ffilter.svg?alt=media&token=a9212a90-5da5-438d-995c-1f89290d88a1'} alt="" style={{maxWidth:'29px'}}/></Button> 
         }
         
         <Collapse in={isOpen} animateOpacity>
+
+          <h1 style={{color:'#232323', fontSize:'18px', fontWeight:'800', margin:'0px 16px 8px 16px'}}>Categorías</h1>
+
           <Box
             p="40px"
             color="white"
@@ -26,25 +29,55 @@ export default function CategoriesComponent() {
             shadow="md"
           >
             
-            <div><Link to={`/productos/${'lacteos'}`} onClick={onToggle} style={{backgroundColor:'#A9FFF5'}}>Lacteos</Link></div>
-              
-            <div style={{ borderRight: '1px solid rgba(0, 0, 0, 0.212)', borderLeft: '1px solid rgba(0, 0, 0, 0.212)'}}><Link to={`/productos/${'carnes'}`} onClick={onToggle} style={{backgroundColor:'#FFCDCD'}}>Carnes</Link></div>
+            <Link to={`/productos/${'lacteos'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/lacteos.svg'} alt="" />
+              Lácteos
+            </Link>
                 
-            <div><Link to={`/productos/${'limpieza'}`} onClick={onToggle} style={{backgroundColor:'#A9DBFF'}}>Limpieza</Link></div>
-            
-            <div><Link to={`/productos/${'cosmetica'}`} onClick={onToggle} style={{backgroundColor:'#E8E8E8'}}>Cosmetica</Link></div>
+            <Link to={`/productos/${'carnes'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/carnes.svg'} alt="" />
+              Carnes
+            </Link>
+                  
+            <Link to={`/productos/${'limpieza'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/limpieza.svg'} alt="" />
+              Limpieza
+            </Link>
+              
+            <Link to={`/productos/${'cosmetica'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/cosmetica.svg'} alt="" />
+              Cosmética
+            </Link>
 
-            <div style={{ borderRight: '1px solid rgba(0, 0, 0, 0.212)', borderLeft: '1px solid rgba(0, 0, 0, 0.212)'}}><Link to={`/productos/${'bebidas'}`} onClick={onToggle} style={{backgroundColor:'#FFAD93'}}>Bebidas</Link></div>
-            
-            <div><Link to={`/productos/${'panaderia'}`} onClick={onToggle} style={{backgroundColor:'#FFE7A9'}}>Panaderia</Link></div>
-            
-            <div><Link to={`/productos/${'verduleria'}`} onClick={onToggle} style={{backgroundColor:'#ABFFA9'}}>Verduleria</Link></div>
-            
-            <div style={{ borderRight: '1px solid rgba(0, 0, 0, 0.212)', borderLeft: '1px solid rgba(0, 0, 0, 0.212)'}}><Link to={`/productos/${'junkfood'}`} onClick={onToggle} style={{backgroundColor:'#D4A9FF'}}>Junk Food</Link></div>
-            
-            <div><Link to={`/productos/${'pastas'}`} onClick={onToggle} style={{backgroundColor:'#FFFB94'}}>Pastas</Link></div>
-            
-            <div><Link to={`/productos/${'aceites'}`} onClick={onToggle} style={{backgroundColor:'#E4FFA9'}}>Despensa</Link></div>
+            <Link to={`/productos/${'bebidas'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/bebidas.svg'} alt="" />
+              Bebidas
+            </Link>
+              
+            <Link to={`/productos/${'panaderia'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/panaderia.svg'} alt="" />
+              Panadería
+            </Link>
+              
+            <Link to={`/productos/${'verduleria'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/verduleria.svg'} alt="" />
+              Verdulería
+            </Link>
+              
+            <Link to={`/productos/${'junkfood'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/junkfood.svg'} alt="" />
+              Junk Food
+            </Link>
+              
+            <Link to={`/productos/${'pastas'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/pastas.svg'} alt="" />
+              Pastas
+            </Link>
+              
+            <Link to={`/productos/${'aceites'}`} onClick={onToggle} className='categorie_container'>
+              <img src={'assets/img/categories/despensa.svg'} alt="" />
+              Despensa
+            </Link>
             
           </Box>
         </Collapse>
@@ -53,17 +86,3 @@ export default function CategoriesComponent() {
       </>
     )
 }
-
-/* 
-<ul>
-<li><Link to='/'>Lacteos</Link></li>
-<li><Link to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-<li><NavLink to='/'>Lacteos</NavLink></li>
-</ul> */

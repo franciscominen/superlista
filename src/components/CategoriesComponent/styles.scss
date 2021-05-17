@@ -9,7 +9,8 @@
         background: none;
         position: relative;
         left: 7em;
-        bottom: 1.1em;
+        bottom: 1.3em;
+
     }
     .chakra-collapse{
         width: 100%;
@@ -17,31 +18,32 @@
         justify-content: center;
         align-items: center;
         
-
         .css-wr6yvz{
-        padding: 0 0 17px 0!important;
-        
-        display: grid;
-        grid-template-columns: repeat(3, 33%);
-        grid-row-gap: 12px;
-        align-self: center;
-        justify-content: center;
-        text-align: center;
-        .link10{
-            grid-area: 4 / 2 / 5 / 3;
-        }
-        div {
+            padding: 0;
+            padding-bottom: 16px;
+            margin: 0 8px 8px 8px;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
 
-            a {
+            .categorie_container {
+                color: $colorPrincipal;
                 font-size: 17px;
-                font-weight: 600;
-                color: #ffffff;
-                padding: 0px 6px 2px 6px;
-                border-radius: 4px;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                background: white;
+                padding: 6px;
+                margin: 8px;
+                border-radius: 0 15px 15px 15px;
+
+                img {
+                    margin-right: 8px;
+                    margin-left: 4px;
+                    max-width: 32px;
+                }
             }
-        }
         
-    } 
+        } 
     }
   
 

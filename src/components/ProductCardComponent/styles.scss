@@ -5,10 +5,10 @@
     .products_container{
         display: flex;
         flex-wrap: wrap;
-        margin: 16px 8px;
+        margin: 8px;
     }
 
-    .animated {
+    .cardsProducts_container {
         width: 33.3%;
 
             .card_product {
@@ -53,14 +53,34 @@
         }
     }
 
-    .popup-content {
-        left: 0!important;
-        background: gray;
+    .Toastify__toast{
+        width: 90%;
+        margin: auto;
+        bottom: 1em;
+        box-shadow: none!important;
+        border-radius: 20px!important;
+        text-align: center;
+        background: $blanco!important;
+        border: 2px solid $gris;
         
-        .product_container {
-            img {
-                max-width: 100px;
+        .Toastify__close-button {
+            display: none;
+        }
+        .toast_msj {
+            
+            h1 {
+                color: $colorPrincipal;
+                font-size: 15px;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    max-width: 30px;
+                    margin: 0 4px;
+                }
             }
         }
     }
+
 }

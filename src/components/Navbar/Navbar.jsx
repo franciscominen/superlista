@@ -3,10 +3,11 @@ import "./styles.scss";
 import {NavLink} from "react-router-dom";
 import CategoriesComponent from '../CategoriesComponent/CategoriesComponent';
 import SearchComponent from '../SearchComponent/SearchComponent';
-import ClearNotes from './ClearNotes';
+import {Animated} from 'react-animated-css';
 
 const Navbar = ({productCard}) => {
     return (
+        <Animated animationIn="slideInDown" animationOut="fadeOut" isVisible={true} animationInDuration={500} >
         <nav className='navbar'>
 
             <img src={"assets/img/superlistaLogo.svg"} alt="" style={{maxWidth:'114px', margin:'8px 0 24px 0'}} />
@@ -41,6 +42,7 @@ const Navbar = ({productCard}) => {
             <CategoriesComponent productCard={productCard} />
 
         </nav>
+        </Animated>
     )
 }
 export default Navbar
