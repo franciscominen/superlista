@@ -1,20 +1,17 @@
 import React, { useContext } from 'react';
 import "./styles.scss";
-import {FaFilter} from "react-icons/fa";
 import {Link} from "react-router-dom";
 import { Collapse, Box, Button, useDisclosure} from "@chakra-ui/react";
 import { listContext } from '../../utils/ListContext';
 
 
-export default function CategoriesComponent() {
+export default function CategoriesCollapse() {
     const { isOpen, onToggle } = useDisclosure()
     const {productCards} = useContext(listContext);
     return (
       <>
-        {isOpen 
-        ? <Button onClick={onToggle}><img src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FfilterActive.svg?alt=media&token=4eed1656-b0e4-49d1-9234-9daea63bd91a'} alt="" style={{maxWidth:'29px'}}/></Button>
-        : <Button onClick={onToggle}><img src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2Ffilter.svg?alt=media&token=a9212a90-5da5-438d-995c-1f89290d88a1'} alt="" style={{maxWidth:'29px'}}/></Button> 
-        }
+
+        <Button onClick={onToggle} className='collapse-btn'><img src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FfilterIconWhite.svg?alt=media&token=126f47c5-a571-4973-b12a-84d4b3bcf358'} alt=""/></Button>
         
         <Collapse in={isOpen} animateOpacity>
 

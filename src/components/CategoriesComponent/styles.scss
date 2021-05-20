@@ -1,16 +1,23 @@
 @import "../../App.scss";
 
 @media (max-width: 900px) {
-
-
-    .chakra-button {
+    .collapse-btn{
+        position: fixed!important;
+        top: 87%;
+        left: 3%;
         border: none;
-        font-size: 21px;
-        background: none;
-        position: relative;
-        left: 7em;
-        bottom: 1.3em;
-
+        background: $colorPrincipal;
+        padding: 16px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.15);
+        img {
+            width: 28px;
+            position: relative;
+            top: 2px;
+        }
     }
     .chakra-collapse{
         width: 100%;
@@ -46,7 +53,6 @@
         } 
     }
   
-
     .divider {
         height: 22px;
         width: 1px;
@@ -60,5 +66,34 @@
         overflow: auto;
         border-style: none;
         border-width: 0;
+    }
+
+    .carousel-container {
+        margin: 16px 0px 8px 0px;
+        
+        .carousel-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .img-container {
+                background: $blanco;
+                padding: 8px;
+                border-radius: 0 15px 15px 15px;
+                
+                img {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            
+            p {
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 8px;
+                color: $colorPrincipal;
+            }
+        }
     }
 }

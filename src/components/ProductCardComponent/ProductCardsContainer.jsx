@@ -5,6 +5,8 @@ import {ProductList} from './ProductList'
 import Loader from '../../utils/Loader'
 import { db } from '../../firebaseConfig'
 import { listContext } from '../../utils/ListContext';
+import CategoriesCollapse from '../CategoriesComponent/CategoriesCollapse';
+import CategoriesCarousel from '../CategoriesComponent/CategoriesCarousel';
 
 
 const ProductCardsContainer = () => {
@@ -42,8 +44,12 @@ const ProductCardsContainer = () => {
 
   return (
     <>
+
+      
+
     { isLoading ? <Loader/> :
       <>
+      <CategoriesCarousel/>
 
       {
         categoria === undefined ? <h1 style={{color:'#232323', fontSize:'18px', fontWeight:'800', margin:'16px 16px 0 16px'}}>Productos</h1>
