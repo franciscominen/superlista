@@ -1,21 +1,26 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {listContext} from "../../utils/ListContext";
 import "../../utils/styles.scss";
 
 const SearchComponent = () => {
    
-    const {setSearchTerm} = useContext(listContext)
+    const {setSearchTerm, moveTop, setMoveTop, moveTopClick, searchTerm} = useContext(listContext);
 
     return (
-        <div className='search_container'>
-            <img src={"assets/img/searchIcon.svg"} alt="" />
+        
+
+            <form id='search' className='search_container'>
+
             <input 
-                className='search'
+                className={moveTop ? 'search' : 'search moverArriba'}
                 type="text" 
                 placeholder='Buscar producto' 
                 onChange={event => {setSearchTerm(event.target.value)}}
+                id='search'
+                value={searchTerm}
             />
-        </div>
+            </form>
+       
     )
 }
 

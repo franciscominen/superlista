@@ -13,7 +13,7 @@ export const ProductCard = ({ productCard, lista, setLista, productCards }) => {
 
     const Msg = () => (
         <div className='toast_msj'>
-          <h1>Se agregó <img src={img} alt="" />{name} a su lista.</h1>
+          <h1>Se agregó</h1> <span>{name}</span>  <h1>a su lista.</h1>
         </div>
     )
 

@@ -11,8 +11,19 @@ export const ListProvider = ({ children }) => {
         overflowScroll ? setOverflowScroll(false) : setOverflowScroll(true);
     };
 
+    const [moveTop, setMoveTop] = useState(false);
+
+    const moveTopClick = () => {
+        moveTop ? setMoveTop(false) : setMoveTop(true);
+    };
+
     const [lista, setLista] = useState([]); //Seria el cart
+
     const [searchTerm, setSearchTerm] = useState(""); // Buscador
+    function clearSearch(event) { //Limpiar buscador
+        event.preventDefault();
+        setSearchTerm("");
+    }
 
         // Local Storage Get
         useEffect(() => {
@@ -57,8 +68,11 @@ export const ListProvider = ({ children }) => {
                 setOverflowScroll: setOverflowScroll,
                 handleClick: handleClick,
                 setSearchTerm: setSearchTerm,
-                searchTerm: searchTerm
-
+                searchTerm: searchTerm,
+                setMoveTop: setMoveTop,
+                moveTop: moveTop,
+                moveTopClick: moveTopClick,
+                clearSearch: clearSearch
             }}>
 
                 {children}

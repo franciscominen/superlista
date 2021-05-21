@@ -9,7 +9,7 @@ const ClearListModal = () => {
 
     return (
         
-        <Popup trigger={<button className='modalMenu_btn'> <img src={"https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FclearList.svg?alt=media&token=1914ac8d-3b58-4bf2-87bc-8af02fc275c8"} alt="" /> </button>} className='modal_container'>
+        <Popup trigger={<button className='ClearList_btn'> <img src={"https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FclearListBtn.svg?alt=media&token=0d6d2576-0b23-468d-97f1-c243122ad3d8"} alt="" /> </button>} className='modal_container'>
 
             {close => (
                 

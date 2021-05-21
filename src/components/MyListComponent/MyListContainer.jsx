@@ -5,6 +5,7 @@ import {listContext} from "../../utils/ListContext";
 import {Link} from "react-router-dom";
 import { Animated } from 'react-animated-css';
 import ListMenuBtn from '../ListMenuBtn/ListMenuBtn';
+import ClearListModal from '../ListMenuBtn/ClearListModal';
 
 const MyListContainer = () => {
     
@@ -28,7 +29,7 @@ const MyListContainer = () => {
             <>
                 <section className='list_container'>
                     <ItemsInList />
-                    <ListMenuBtn/>
+                    <ClearListModal/>
                 </section>
             </>}
         </> 

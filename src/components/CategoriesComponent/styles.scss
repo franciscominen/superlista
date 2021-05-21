@@ -13,11 +13,19 @@
         justify-content: center;
         align-items: center;
         box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.15);
+        opacity: 0;
+        transition: .4s;
+        transform: translateX(-7em);
         img {
             width: 28px;
             position: relative;
             top: 2px;
         }
+    }
+    .active {
+        transform: translateX(0);
+        opacity: 1;
+        transition: .4s;
     }
     .chakra-collapse{
         width: 100%;
@@ -28,7 +36,7 @@
         .css-wr6yvz{
             padding: 0;
             padding-bottom: 16px;
-            margin: 0 8px 8px 8px;
+            margin: 0 8px 0px 8px;
             display: grid;
             grid-template-columns: repeat(2, 50%);
 
@@ -49,7 +57,6 @@
                     max-width: 32px;
                 }
             }
-        
         } 
     }
   
@@ -70,13 +77,15 @@
 
     .carousel-container {
         margin: 16px 0px 8px 0px;
-        
+        &:hover {
+            overflow: hidden;
+        }
         .carousel-item {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
+
             .img-container {
                 background: $blanco;
                 padding: 8px;
@@ -95,5 +104,71 @@
                 color: $colorPrincipal;
             }
         }
+    }
+
+    .categories-container {
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        margin: 0px 8px;
+        .carousel-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 16px;
+            .img-container {
+                background: $blanco;
+                padding: 8px;
+                border-radius: 0 15px 15px 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+            
+            p {
+                font-size: 13px;
+                font-weight: 400;
+                margin-top: 8px;
+                color: $colorPrincipal;
+            }
+        }
+    }
+
+    .rotate {
+        transform: rotateZ(180deg);
+        transition: .2s;
+    }
+    .close-category_container {
+        position: absolute;
+        width: 72px;
+        top: 11em;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .close-category {
+        font-size: 10px;
+        padding: 8px;
+        font-weight: 700;
+        background-color: $colorPrincipal;
+        color: $blanco;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        display: none;
+    }
+   
+    .active{
+        display: flex;
+        opacity: 1;
+        transition: .2s;
     }
 }

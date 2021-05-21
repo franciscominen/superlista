@@ -17,7 +17,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: 10px;
+            padding: 8px;
             margin: 5%;
             border-radius: 20px;
             text-align: center;
@@ -42,7 +42,7 @@
 
             h1 {
                 margin: 4px 0;
-                height: 32px;
+                height: 24px;
                 font-size: 15px;
                 font-weight: 400;
                 color: $colorPrincipal;
@@ -55,33 +55,37 @@
 
     .Toastify__toast{
         width: 90%;
-        margin: auto;
+        margin: 0 auto;
         bottom: 1em;
+        min-height: 52px!important;
         box-shadow: none!important;
-        border-radius: 20px!important;
+        border-radius: 22px!important;
         text-align: center;
-        background: $blanco!important;
-        border: 2px solid $gris;
-        
+        background: #f8f8f8f2!important;
+        border: 1px solid $gris;
+
         .Toastify__close-button {
             display: none;
         }
+
         .toast_msj {
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
             h1 {
                 color: $colorPrincipal;
-                font-size: 15px;
-                font-weight: 700;
+                font-size: 18px;
+                font-weight: 400;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                img {
-                    max-width: 30px;
-                    margin: 0 4px;
-                }
+            }
+            span {
+                margin: 0 8px;
+                color: $colorPrincipal;
+                font-size: 18px;
+                font-weight: 600;
             }
         }
     }
-
-    
 }

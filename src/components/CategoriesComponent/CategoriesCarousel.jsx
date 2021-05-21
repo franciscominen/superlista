@@ -26,7 +26,8 @@ const CategoriesCarousel = () => {
           }
   
         ]}
-        animationSpeed={600}
+        animationSpeed={500}
+        offset={16}
       >
         <div className='carousel-item'>
           <Link to={`/productos/${'carnes'}`} className='img-container'>

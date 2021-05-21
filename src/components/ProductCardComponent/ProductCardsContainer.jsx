@@ -7,6 +7,7 @@ import { db } from '../../firebaseConfig'
 import { listContext } from '../../utils/ListContext';
 import CategoriesCollapse from '../CategoriesComponent/CategoriesCollapse';
 import CategoriesCarousel from '../CategoriesComponent/CategoriesCarousel';
+import CategoriesStatic from '../CategoriesComponent/CategoriesStatic';
 
 
 const ProductCardsContainer = () => {
@@ -15,42 +16,39 @@ const ProductCardsContainer = () => {
   const [isLoading, setIsloading] = useState([])
   const {categoria} = useParams();
   
-      // Llamado a FIREBASE
-      useEffect(() => {
+    // Llamado a FIREBASE
+    useEffect(() => {
 
-          setIsloading(true)
-    
-          const productList = db.collection("productos");
-    
-          const loadProductList = new Promise((resolve, reject) => {
-            productList.get().then((value) => {
-                let aux = value.docs.map(e => {
-                    return { ...e.data(), id: e.id }
-                })
-                resolve(aux.sort((a, b) => { if (a.name < b.name) { return -1 }; if (a.name > b.name) { return 1 }; return 0 }));
-              })
-          });
-    
-          loadProductList.then((database) => {
-            const filterProductList = database.filter((e) => e.categoryId === categoria)
-            const result = (filterProductList.length === 0) ? database : filterProductList
-            setProductCards(result)
-            setIsloading(false)
+      setIsloading(true)
+
+      const productList = db.collection("productos");
+
+      const loadProductList = new Promise((resolve, reject) => {
+        productList.get().then((value) => {
+            let aux = value.docs.map(e => {
+                return { ...e.data(), id: e.id }
+            })
+            resolve(aux.sort((a, b) => { if (a.name < b.name) { return -1 }; if (a.name > b.name) { return 1 }; return 0 }));
           })
-    
-        }, [categoria]) 
+      });
 
-
+      loadProductList.then((database) => {
+        const filterProductList = database.filter((e) => e.categoryId === categoria)
+        const result = (filterProductList.length === 0) ? database : filterProductList
+        setProductCards(result)
+        setIsloading(false)
+      })
+  
+      }, [categoria]) 
 
   return (
     <>
 
-      
+    <CategoriesStatic/>
 
     { isLoading ? <Loader/> :
       <>
-      <CategoriesCarousel/>
-
+      
       {
         categoria === undefined ? <h1 style={{color:'#232323', fontSize:'18px', fontWeight:'800', margin:'16px 16px 0 16px'}}>Productos</h1>
         : <h1 style={{color:'#232323', fontSize:'18px', fontWeight:'800', margin:'16px 16px 0 16px', textTransform:'capitalize'}}>{categoria}</h1>
