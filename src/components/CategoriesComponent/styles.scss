@@ -123,11 +123,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                img {
-                    width: 42px;
-                    height: 42px;
-                }
             }
             
             p {
@@ -140,7 +135,7 @@
     }
 
     .rotate {
-        transform: rotateZ(180deg);
+        transform: rotateZ(90deg);
         transition: .2s;
     }
     .close-category_container {
@@ -151,19 +146,18 @@
         justify-content: flex-end;
     }
     .close-category {
-        font-size: 10px;
-        padding: 8px;
-        font-weight: 700;
         background-color: $colorPrincipal;
-        color: $blanco;
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         border-radius: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         opacity: 0;
         display: none;
+        .close-category_img {
+           /*  max-width: 10px; */
+        }
     }
    
     .active{

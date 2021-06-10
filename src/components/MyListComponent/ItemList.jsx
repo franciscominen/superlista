@@ -2,10 +2,10 @@ import React, {useContext} from 'react';
 import { listContext } from '../../utils/ListContext';
 import { NoteModalComponent } from '../ProductCardComponent/NoteModalComponent';
 
-const ItemList = ({productCard, lista, setLista, productCards}) => {
-    const  {name, img, nota, id} = productCard;
-    const {removeItem} = useContext(listContext)
-    console.log(productCard)
+const ItemList = ({item, id}) => {
+    const  {name, img, nota} = item;
+    const {removeItem, products} = useContext(listContext)
+
     return (
         <div className='producList_container'>
 
@@ -19,7 +19,7 @@ const ItemList = ({productCard, lista, setLista, productCards}) => {
             </div>
 
             <div className='btns_container'>
-                <NoteModalComponent productCard={productCard} lista={setLista} productCards={productCards}/>
+                {/* <NoteModalComponent productCard={productCard} lista={setLista} productCards={productCards}/> */}
                 <button onClick={() => removeItem(id)} className='close_btn'><img src={'assets/img/closeIcon.svg'} alt="" /></button>
             </div>
 

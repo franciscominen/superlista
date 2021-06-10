@@ -1,76 +1,61 @@
-import React, { useState, useContext } from 'react';
+import React, {useState, useContext} from 'react'
 import Popup from 'reactjs-popup';
+import {Animated} from "react-animated-css";
 import { db } from '../../firebaseConfig';
 import { listContext } from '../../utils/ListContext';
-import "./noteModal.scss";
-import {Animated} from "react-animated-css";
 
-export const NoteModalComponent = ({productCard}) => {
-  const {id, categoryId, name, img, nota} = productCard; 
-  const [newNote, setNewNote] = useState(productCard.nota)
+export const NoteModalComponent = ({ item, id }) => {
+    const {name, img} = item;
+    const {addItem} = useContext(listContext)
+    const [note, setNote] = useState('')
+    function handleChange(e) { setNote(e.target.value) };
 
-  const {addItem, handleClick} = useContext(listContext);
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    createNote();
-    addItem(productCard)
-  }
-
-  const handleNoteChange = (e) => setNewNote(e.target.value);
-
-  const createNote = async () => {
-    try {
-      await db.collection('productos').doc(productCard.id).update({
-        nota: newNote
-      })
-    } catch (error) {
-      console.log(error)
+    const addNote = (id, note) => {
+        db.collection("invitados")
+            .add({
+                productId: id,
+                nota: note,
+                productName: item.name
+            })
+            .then(refDoc => {
+            console.log('agregado correctamente');
+            })
+            .catch(err => {
+            console.error("Error");
+            })
     }
-  } 
 
-  return (
-    <Popup trigger={<button className='modalMenu_btn'> 
-    <img
-    src={"https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FnoteIcon.svg?alt=media&token=687a8862-c227-46dc-8f0d-d5d1a3501483"} alt="" /> </button>} className='modal_container'>
+    console.log(id)
 
-      {close => (
-          
-        <Animated animationIn="zoomIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationInDuration={500} className='modal'>
+    return (
+        <Popup trigger={<button > E </button>} className='modal_container'>
 
-          <img onClick={close} className='closeNoteModal' src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FcloseIcon.svg?alt=media&token=381af7d8-e5df-458d-958f-ea4ff23ab14c'} alt="" />
+        {close => (
+            
+            <Animated animationIn="zoomIn" animationOut="fadeOut" isVisible={true} animationInDuration={500} animationInDuration={500} className='modal'>
+                <button onClick={close}>X</button>
+                
+                <div style={{display:'flex'}}>
+                    <img src={img} style={{maxWidth:'50px'}} />
+                    <p>{name}</p>
+                </div>
 
-          <div className='noteModalInfo_container'>
+                <div className='form'>
+                
+                        <input  
+                            type="text" 
+                            placeholder='escriba aqui'
+                            value={note}
+                            onChange={handleChange}
+                        />
+                        <button onClick={() => addNote(id, note)}>
+                            <span onClick={()=>addItem(item)}>SEND</span> 
+                        </button>
+                    
+                </div>
 
-            <img src={img} alt="" />
-            <h1>{name}</h1>
-             
-          </div>
-          
-          <form className='formNote_container' onSubmit={handleSubmit}>
-            <input type="text" value={newNote} placeholder='Escriba aqui...' onChange={handleNoteChange}/>
-            { window.location.href === 'http://localhost:3000/productos' ? 
-              <button type='sumbit'className='guardar-btn' >Agregar a mi lista</button> :
-              <button type='sumbit'className='guardar-btn' >Guardar cambios</button>
-            }
-          </form>
-
-        </Animated>
-
-      )}
-
+            </Animated>
+        )}
     </Popup>
-  )
+    )
 }
-
-{/* <img src={'assets/img/closeIcon.svg'} alt="" className='close_img' onClick={close}/>
-<div className='product_container'>
-    <img src={img} alt="" className='imgNote_modal'/>
-    <h1>{name}</h1>
-  </div>
-<form className='modal_form' onSubmit={handleSubmit}>
-
-  <input type="text" value={newNote} placeholder='Escriba aqui...' onChange={handleNoteChange}/>
-  <button type='sumbit'className='guardar-btn' >Agregar a mi lista</button>
-
-</form>  */}

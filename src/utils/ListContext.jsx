@@ -5,25 +5,10 @@ import { db } from "../firebaseConfig";
 export const listContext = createContext();
 export const ListProvider = ({ children }) => {
 
-    const [overflowScroll, setOverflowScroll] = useState(false);
+    // PRODUCTOS EN MI LISTA
+    const [lista, setLista] = useState([]); 
 
-    const handleClick = () => {
-        overflowScroll ? setOverflowScroll(false) : setOverflowScroll(true);
-    };
-
-    const [moveTop, setMoveTop] = useState(false);
-
-    const moveTopClick = () => {
-        moveTop ? setMoveTop(false) : setMoveTop(true);
-    };
-
-    const [lista, setLista] = useState([]); //Seria el cart
-
-    const [searchTerm, setSearchTerm] = useState(""); // Buscador
-    function clearSearch(event) { //Limpiar buscador
-        event.preventDefault();
-        setSearchTerm("");
-    }
+    // LOCAL STORAGE
 
         // Local Storage Get
         useEffect(() => {
@@ -37,24 +22,64 @@ export const ListProvider = ({ children }) => {
             localStorage.setItem('lista', JSON.stringify(lista));
         }, [lista]);
     
-    // add product
-    const addItem = (productCard) => {
-        const exists = lista.find(x => x.id === productCard.id);
+
+        const [products, setProducts] = useState([])
+
+        const getProducts = async () => {
+          const allRef = await db.collection('products').get()
+          const allDocs = allRef.docs.map(document => {
+            return { id: document.id, ...document.data() }
+          })
+          setProducts(allDocs)
+          console.log(allDocs)
+        }
+      
+        useEffect(() => {
+          getProducts()
+        }, [])
+        
+    // AGREGAR PRODUCTO A MI LISTA
+    const addItem = (product) => {
+        const exists = lista.find(x => x.id === product.id);
         if(exists) {
-            setLista(lista.map(x => x.id === productCard.id ? [{...exists }] : x));
+            setLista(lista);
         } else {
-            setLista([...lista, {...productCard}])
+            setLista([...lista, {...product}])
         }
     }
 
+    // QUITAR PRODUCTO
     const removeItem = (id) => {
         const productCards = lista.filter(productCard => productCard.id !== id);
         setLista(productCards);
     }
- 
+    // BORRAR TODOS LOS PRODUCTOS
     const clearList = () => {
         setLista([])
     };
+
+    // BUSCADOR
+    const [searchTerm, setSearchTerm] = useState(""); 
+    function clearSearch(event) { //Limpiar buscador
+        event.preventDefault();
+        setSearchTerm("");
+    }
+
+    // OTRAS FUNCIONES DE ESTILOS
+    const [overflowScroll, setOverflowScroll] = useState(false);
+    const handleClick = () => {
+        overflowScroll ? setOverflowScroll(false) : setOverflowScroll(true);
+    };
+
+    const [moveTop, setMoveTop] = useState(false);
+    const moveTopClick = () => {
+        moveTop ? setMoveTop(false) : setMoveTop(true);
+    };
+
+    // AGREGAR/EDITAR NOTAS
+    const addOrEdit = () => {
+
+    }
 
     return (
         <>

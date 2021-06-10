@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+/* import React, { useContext, useEffect, useState } from 'react';
 import { ProductCard } from './ProductCard';
 import { listContext } from '../../utils/ListContext';
 
 
-export const ProductList = ({productCards}) => {
+export const ProductList = ({[]}) => {
 
     const {lista, setLista, searchTerm} = useContext(listContext)
 
@@ -27,4 +27,4 @@ export const ProductList = ({productCards}) => {
             }
         </>
     )
-}
+} */

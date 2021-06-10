@@ -6,7 +6,7 @@
 }
 
 @keyframes move {
-    100% {transform: translateY(-7.5em);}
+    100% {transform: translateY(-10.5em);}
 }
 
 @media (max-width: 900px) {
@@ -34,8 +34,8 @@
             display: flex;
 
             .newList_btn {
-                width: 170px;
-                height: 140px;
+                width: 162px;
+                height: 162px;
                 background: #f8f8f8;
                 border: none;
                 display: flex;
@@ -44,16 +44,78 @@
                 justify-content: center;
                 font-size: 16px;
                 font-weight: 400;
-                padding: 16px;
+             /*    padding: 16px; */
                 margin: 8px;
                 color: $colorPrincipal;
+                border: 1px solid $gris;
                 border-radius: 20px;
                 img {
                     position: relative;
-                    max-width: 50px;
-                    margin-bottom: 8px;
+                    max-width: 78px;
+                }
+                p {
+                    position: relative;
+                    top: 1em;
+                    strong {
+                        font-weight: 600;
+                    }
                 }
             }
+        }
+
+        .login-home_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 15%;
+
+            h2 {
+                color: $colorPrincipal;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            a {
+                color: $grisOscuro;
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .default-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4.5em;
+        h1 {
+            color: $gris;
+            font-size: 52px;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        h2 {
+            color: $gris;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            width: 70%;
+        }
+
+        .volver-inicio_btn {
+            color: $blanco;
+            background: $gris;
+            border: 1px solid $grisOscuro;
+            border-radius: 20px;
+            padding: 6px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            position: relative;
+            top: 4em;
         }
     }
 }

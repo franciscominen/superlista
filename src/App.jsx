@@ -6,6 +6,7 @@ import Home from './layout/Home';
 import ProductCardsContainer from './components/ProductCardComponent/ProductCardsContainer'
 import MyListContainer from './components/MyListComponent/MyListContainer';
 import { ListProvider } from './utils/ListContext';
+import Default from './layout/Default';
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
           <Route exact component={Home} path="/" />
           <Route exact component={ProductCardsContainer} path="/productos" />
           <Route exact component={MyListContainer} path="/mi-lista" />
+          <Route exact component={Default} path="/on-work" />
 
         </Switch>
 
