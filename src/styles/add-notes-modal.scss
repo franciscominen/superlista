@@ -1,0 +1,93 @@
+@import "../App.scss";
+
+@media (max-width: 900px){
+
+    .addNote__btn {
+        background: none;
+        border: none;
+    }
+
+    .modal-img__myList {
+        max-width: 21px;
+    }
+    .popup-content {
+        background: #27272777;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+
+        .modal {
+            background: $blanco;
+            position: relative;
+            width: 80%;
+            overflow-y: hidden;
+            margin: auto;
+            top: 2em;
+            border-radius: 35px;
+
+            .close-btn {
+                position: absolute;
+                background: none;
+                border: none;
+                right: 8px;
+                padding: 16px 24px;
+                img {
+                    max-width: 21px;
+                }
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                padding: 16px 18px;
+
+                img {
+                    max-width: 64px;
+                }
+                h1 {
+                    color: $colorPrincipal;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            .content {
+                width: 75%;
+                margin: auto;
+               
+                .note_input {
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $grisOscuro;
+                    padding: 8px 0;
+                    width: 100%;
+                    margin-bottom: 24px;
+                    color: $colorPrincipal;
+                    font-size: 18px;
+                    font-weight: 600;
+                    &::placeholder {
+                        color: $grisOscuro;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .addNoteList_btn {
+            display: block;
+            margin: auto;
+            position: absolute;
+            top: 11em;
+            left: 0;
+            right: 0;
+            border: none;
+            border-radius: 24px;
+            background: $colorPrincipal;
+            color: $blanco;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 28px;
+        }
+    }
+}

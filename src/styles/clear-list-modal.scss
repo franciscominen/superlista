@@ -1,0 +1,88 @@
+@import "../App.scss";
+
+@media (max-width: 900px) {
+    .clearList_btn {
+        background: $colorPrincipal;
+        position: fixed;
+        padding: 8px;
+        width: 54px;
+        height: 54px;
+        border-radius: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 85%;
+        left: 4%;
+        box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.15);
+    }
+
+    .modal__clearList {
+        background: $blanco;
+        width: 80%;
+        margin: auto;
+        border-radius: 35px;
+        padding: 24px 16px;
+        margin-top: 13em;
+
+        .header__clearList {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            h1 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 32px;
+                color: $colorPrincipal;
+            }
+
+            .close_btn {
+                position: relative;
+                background: none;
+                border: none;
+                left: 0;
+                left: 34px;
+                max-width: 21px;
+            }
+        }
+
+        .content__clearList {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 16px 0 0 0;
+
+            .btn_si {
+                width: 136px;
+                height: 55px;
+                font-size: 25px;
+                font-weight: 600;
+                color: $grisOscuro;
+                background: #F5F5F5;
+                border: 2px solid $gris;
+                border-radius: 20px;
+                padding: 4px 0;
+                margin: 8px;
+                margin-bottom: 0;
+            }
+            .btn_no {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 136px;
+                height: 55px;
+                font-size: 25px;
+                font-weight: 600;
+                color: $blanco;
+                background: $gris;
+                border: 2px solid $gris;
+                border-radius: 20px;
+                padding: 4px 0;
+                margin: 8px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

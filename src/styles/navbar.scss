@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import "../App.scss";
 @media (max-width: 900px) {
     .moverArriba {
         transform: translateY(-5em);
@@ -89,6 +89,34 @@
             padding: 16px 8px 0 8px;
         }
     }
+
+    .search_container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        input {
+          width: 100%;
+          background: none;
+          border: none;
+          border: none;
+          border-bottom: 0.5px solid #232323;
+          border-radius: 0px;
+          padding: 3px;
+          padding-bottom: 6px;
+          outline: none;
+          font-size: 17px;
+          font-weight: 300;
+          color: #232323;
+          transition: .3s;
+        }
+      
+        ::placeholder {
+          font-size: 17px;
+          outline: none;
+          font-weight: 400;
+          color: $colorPrincipal;
+        }
+      }
 }
 
 .nav-link::after {
@@ -107,8 +135,6 @@
     background: $colorPrincipal;
     transition: width .3s;
 }
-
-
 .nav-link:hover::after {
     width: 102px;
 }

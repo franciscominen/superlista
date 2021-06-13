@@ -2,11 +2,11 @@ import React from 'react';
 import './App.scss';
 import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Home from './layout/Home';
-import ProductCardsContainer from './components/ProductCardComponent/ProductCardsContainer'
+import Home from './components/layout/Home';
 import MyListContainer from './components/MyListComponent/MyListContainer';
-import { ListProvider } from './utils/ListContext';
-import Default from './layout/Default';
+import Default from './components/layout/Default';
+import StoreProvider from './context/StoreProvider';
+import ProductsContainer from './components/ProductsComponent/ProductsContainer';
 
 function App() {
   
@@ -14,21 +14,21 @@ function App() {
     <>
     <Router>
 
-      <ListProvider> 
+      <StoreProvider> 
         
         <Navbar />
 
         <Switch>
           
-          <Route exact component={ProductCardsContainer} path="/productos/:categoria" />
+          <Route exact component={ProductsContainer} path="/productos/:categoryId" />
           <Route exact component={Home} path="/" />
-          <Route exact component={ProductCardsContainer} path="/productos" />
+          <Route exact component={ProductsContainer} path="/productos" />
           <Route exact component={MyListContainer} path="/mi-lista" />
           <Route exact component={Default} path="/on-work" />
 
         </Switch>
 
-      </ListProvider> 
+      </StoreProvider> 
 
     </Router>  
     

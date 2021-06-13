@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import '../../styles/categories.scss'
 import {Link} from "react-router-dom";
 import {Animated} from 'react-animated-css';
 import { Collapse, Box, Button, useDisclosure} from "@chakra-ui/react";

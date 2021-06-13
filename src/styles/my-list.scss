@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import "../App.scss";
 
 @media (max-width: 900px) {
 
@@ -28,14 +28,15 @@
                 margin-right: 8px;
             }
 
-            h1 {
+            h2 {
                 font-size: 18px;
                 font-weight: 600;
                 color: $colorPrincipal;
+                margin-bottom: -4px;
             }
             p {
                 font-size: 16px;
-                color: $gris;
+                color: $grisOscuro;
             }
         }
         .btns_container {
@@ -45,6 +46,7 @@
             .close_btn {
                 background: none;
                 border: none;
+                margin-left: 16px;
                 img {
                     max-width: 21px;
                 }
@@ -85,6 +87,41 @@
             font-weight: 500;
             color: white;
             margin: 16px 0;
+        }
+    }
+
+
+    .list-empty__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 70vh;
+
+        h1 {
+            color: $grisOscuro;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 25px;
+            text-align: center;
+            width: 278px;
+            margin: 8px 0 24px 0;
+        }
+
+        .backProducts_btn {
+            background: #F5F5F5;
+            border: 1px solid #D2D2D2;
+            box-sizing: border-box;
+            border-radius: 20px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            color: $grisOscuro;
+            padding: 8px 24px;
         }
     }
 }

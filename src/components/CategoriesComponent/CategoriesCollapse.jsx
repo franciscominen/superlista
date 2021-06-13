@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import "./styles.scss";
+
 import {Link} from "react-router-dom";
 import { Collapse, Box, Button, useDisclosure} from "@chakra-ui/react";
-import { listContext } from '../../utils/ListContext';
 
 
 export default function CategoriesCollapse() {

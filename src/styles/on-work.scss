@@ -1,0 +1,37 @@
+@import "../App.scss";
+
+@media (max-width: 900px) {
+
+    .default-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4.5em;
+        h1 {
+            color: $gris;
+            font-size: 52px;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        h2 {
+            color: $gris;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            width: 70%;
+        }
+
+        .volver-inicio_btn {
+            color: $blanco;
+            background: $gris;
+            border: 1px solid $grisOscuro;
+            border-radius: 20px;
+            padding: 6px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            position: relative;
+            top: 4em;
+        }
+    }
+}

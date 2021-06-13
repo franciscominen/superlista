@@ -1,7 +1,7 @@
 import React from 'react'
 import { Animated } from 'react-animated-css'
 import {Link} from 'react-router-dom'
-import "./styles.scss"
+import "../../styles/on-work.scss"
 
 const Default = () => {
     return (

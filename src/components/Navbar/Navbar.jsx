@@ -1,14 +1,14 @@
 import React, {useContext} from 'react';
-import "./styles.scss";
+import "../../styles/navbar.scss";
 import {NavLink} from "react-router-dom";
 import CategoriesComponent from '../CategoriesComponent/CategoriesCollapse';
-import SearchComponent from '../SearchComponent/SearchComponent';
+import SearchComponent from './SearchComponent/SearchComponent';
 import {Animated} from 'react-animated-css';
-import { listContext } from '../../utils/ListContext';
+import { StoreContext } from '../../context/StoreProvider';
 
-const Navbar = ({productCard}) => {
+const Navbar = () => {
 
-    const {moveTop, setMoveTop, moveTopClick, clearSearch } = useContext(listContext);
+    const {moveTop, setMoveTop, moveTopClick, clearSearch } = useContext(StoreContext);
 
     return (
         
@@ -51,7 +51,7 @@ const Navbar = ({productCard}) => {
                 </NavLink>
             </div>
 
-            <CategoriesComponent productCard={productCard} />
+            {/* <CategoriesComponent productCard={productCard} /> */}
 
         </nav>
  
