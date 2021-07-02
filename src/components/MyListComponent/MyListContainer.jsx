@@ -6,8 +6,8 @@ import MyListEmpty from './MyListEmpty'
 import ClearListModal from '../Modals/ClearListModal'
 
 const MyListContainer = () => {
-    const {cart, clearList} = useContext(StoreContext)
-
+    const {cart} = useContext(StoreContext)
+    console.log(cart)
     return (
         <>
             {

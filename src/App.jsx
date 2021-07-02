@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import  {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/layout/Home';
 import MyListContainer from './components/MyListComponent/MyListContainer';
@@ -20,7 +20,7 @@ function App() {
 
         <Switch>
           
-          <Route exact component={ProductsContainer} path="/productos/:categoryId" />
+          <Route exact component={ProductsContainer} path="/productos/:categoria" />
           <Route exact component={Home} path="/" />
           <Route exact component={ProductsContainer} path="/productos" />
           <Route exact component={MyListContainer} path="/mi-lista" />

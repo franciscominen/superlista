@@ -3,8 +3,11 @@ import '../../styles/product-cards.scss'
 import { StoreContext } from '../../context/StoreProvider'
 import AddNoteModal from '../Modals/AddNoteModal'
 import { toast, Slide } from 'react-toastify'
+import { useParams } from 'react-router-dom'
 
 const ProductCard = ({product, addProduct}) => {
+
+    const categoryID = useParams()
 
     const Msg = () => (
         <div className='toast_msj'>
@@ -44,14 +47,16 @@ const ProductCard = ({product, addProduct}) => {
                 
             </div>
 
-            <img 
-                src={product.img} 
-                alt={product.name} 
-                className='card-product__img' 
-            />
+            <div className='cardImg_container'>
+                <img 
+                    src={product.img} 
+                    alt={product.name} 
+                    className='card-product__img' 
+                />
+            </div>
 
             <h2 className='card-product__name'>{product.name}</h2>
-
+           
         </div>
     )
 }

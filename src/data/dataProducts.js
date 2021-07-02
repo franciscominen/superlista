@@ -1,14 +1,106 @@
 export const productsData = [
-    {id: 'X0DtSu3ziM', name: 'Palta', categoryId: 'verduras', nota: '', 
-    img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/verduleria%2Fverduras%2FpaltaIcon.svg?alt=media&token=bc34c273-3feb-46c0-945e-744146591bc3'},
-    {id: 'cvIK77kDt0', name: 'Cerdo', categoryId: 'carnes', nota: '', 
-        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/carnes%2FcerdoIcon.svg?alt=media&token=efba3bdd-fae0-429e-9456-f5e6c3781cda'},
-    {id: 'yfHczA-0-T', name: 'Jabon', categoryId: 'cosmetica', nota: '', 
-        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/cosmtica%2FjabonIcon.svg?alt=media&token=7b425cc8-ae5f-477c-bb7d-6f1a58836cd2'},
-    {id: '5P-kQVDkON', name: 'Whisky', categoryId: 'bebidas', nota: '', 
-        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/bebidas%2FwhiskyIcon.svg?alt=media&token=dfd01458-43c6-48df-925e-86bd5a13f559'},
-    {id: 'tKeZR2mn2Z', name: 'Mostachones', categoryId: 'pastas', nota: '', 
-        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/pastas%2FmostachonesIcon.svg?alt=media&token=f9470999-5af0-4ce0-a45f-2666a2e866a4'},
-    {id: '3HDRoys-Ma', name: 'Queso', categoryId: 'lacteos', nota: '', 
-        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/lacteos%2FquesoIcon.svg?alt=media&token=cab9092d-d56b-4ee1-bc8b-8576a4441892'}
+    
+    /* ======== BEBIDAS ======= */
+    {
+        id: 'tH7so8f68S',
+        categoryID: 'bebidas',
+        name: 'Agua saborizada',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/bebidas%2FAgua%20saborizada.svg?alt=media&token=a3927bd3-e854-4a1f-9ecf-354d86d8b06e',
+        nota: ''
+    },
+    {
+        id: '_2EGlQKe9R',
+        categoryID: 'bebidas',
+        name: 'Agua',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/bebidas%2FAgua.svg?alt=media&token=0b6f407d-206f-42b8-8cac-b8ad36b1971f',
+        nota: ''
+    },
+    {
+        id: 'r2pKQqiCzO',
+        categoryID: 'bebidas',
+        name: 'Aperitivo',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/bebidas%2FAperitivo.svg?alt=media&token=3900f0a6-e258-468e-a2f7-2276aa01fad8',
+        nota: ''
+    },
+    /* ======== CARNES ======= */
+    {
+        id: 'fVGG7RIhtx',
+        categoryID: 'carnes',
+        name: 'Cerdo',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/carnes%2FCerdo.svg?alt=media&token=31aa043d-5e31-401c-8776-91b5b57ec012',
+        nota: ''
+    },
+    {
+        id: 'NusoJw_O8b',
+        categoryID: 'carnes',
+        name: 'Embutidos',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/carnes%2FEmbutidos.svg?alt=media&token=aa1bf788-842f-4125-87c6-6d3314c81a61',
+        nota: ''
+    },
+    {
+        id: 'ufFN-xZlXx',
+        categoryID: 'carnes',
+        name: 'Milanesa',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/carnes%2FMilanesa.svg?alt=media&token=eb1ab241-8beb-4467-bed6-adc5f1ebca39',
+        nota: ''
+    },
+    /* ======== COSMETICA ======= */
+    {
+        id: 'SN47LzXMcx',
+        categoryID: 'cosmetica',
+        name: 'Acondicionador',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/cosmtica%2FAcondicionador.svg?alt=media&token=443683b5-930c-45d5-abfa-8977f2fb53ec',
+        nota: ''
+    },
+    {
+        id: 'zfWbrscBoA',
+        categoryID: 'cosmetica',
+        name: 'Afeitadora',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/cosmtica%2FAfeitadora.svg?alt=media&token=8b553156-b065-465f-842c-b01a7b35db34',
+        nota: ''
+    },
+    {
+        id: 'zp45HC_5Tv',
+        categoryID: 'cosmetica',
+        name: 'Anti transpirante',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/cosmtica%2FAnti%20transpirante.svg?alt=media&token=99967886-1576-4c55-bfe6-808511e7d106',
+        nota: ''
+    },
+
+    /* ======== DESPENSA ======== */
+    {
+        id: '12asdw1',
+        categoryID: 'despensa',
+        name: 'Aceite',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/despensa%2FAceite.svg?alt=media&token=9f6b1777-7287-49ac-89f0-0c9b9c0c75e1',
+        nota: ''
+    },
+    {
+        id: '534nbvj',
+        categoryID: 'despensa',
+        name: 'Aderezos',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/despensa%2FAderezos.svg?alt=media&token=52442c45-7208-4c17-abbb-b9efbf220596',
+        nota: ''
+    },
+    {
+        id: 'asndw823',
+        categoryID: 'despensa',
+        name: 'Arroz',
+        img: 'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/despensa%2FArroz.svg?alt=media&token=ca8b8f5e-63e9-47c0-a5cb-be1d072cf586',
+        nota: ''
+    },
+
+    /* ========= JUNK FOOD ======== */
+
+    /* ========= LACTEOS ======== */
+
+    /* ========= LIMPIEZA ======== */
+
+    /* ========= PANADERIA ======== */
+
+    /* ========= PASTAS ======== */
+
+    /* ========= VERDULERIA ======== */
+
+    
 ]

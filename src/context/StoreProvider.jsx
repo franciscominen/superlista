@@ -1,24 +1,47 @@
 import { createContext, useState, useReducer, useEffect } from 'react'
-import { productsData } from '../data/dataProducts';
 import storeReducer from './StoreReducer';
+import { useParams } from 'react-router-dom';
+import { db } from '../firebaseConfig';
+import { productsData } from '../data/dataProducts';
 
 const initialState = {
     products: productsData,
-    cart: localStorage.getItem("userList")
-    ? JSON.parse(localStorage.getItem("userList"))
-    : [],
+    isLoading: false,
+    isError: false,
+    cart: localStorage.getItem('userList')
+    ? JSON.parse(localStorage.getItem('userList')) : [],
 }
 
 const StoreContext = createContext(initialState);
-const StoreProvider = ({ children }) => {
 
-    // Dispatch con Local Storage
+const StoreProvider = ({ children }) => {
+    // Reducer
     const [state, dispatch] = useReducer(storeReducer, initialState)
 
+/*     // Fetch products data from Firestore
+    useEffect(() => {
+        const fetchData = async () => {
+            const productsCollection = db.collection('products');
+            dispatch({ type: 'FETCH_INIT' });
+            try {
+                const getData = await productsCollection.get();
+                getData.docs.forEach( product => {
+                    dispatch({ type: 'FETCH_SUCCESS', payload: { ...product.data() }})
+                })
+               
+            } catch (error) {
+                dispatch({ type: 'FETCH_FAILURE' });
+            }
+        };
+        fetchData()
+    }, [])  
+  
+    
+    //Local Storage my-list
     useEffect(() => {
         localStorage.setItem("userList", JSON.stringify(state.cart));
-    }, [state]);
-    
+    }, [state]); */
+   
     // Add product Function
     const addProduct = (product) => {
         dispatch ({
@@ -79,7 +102,8 @@ const StoreProvider = ({ children }) => {
             clearSearch,
             moveTop: moveTop,
             setMoveTop,
-            moveTopClick
+            moveTopClick,
+            dispatch
         }}>
             {children}
         </StoreContext.Provider>
