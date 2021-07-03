@@ -5,7 +5,7 @@ import { db } from '../firebaseConfig';
 import { productsData } from '../data/dataProducts';
 
 const initialState = {
-    products: productsData,
+    products: [],
     isLoading: false,
     isError: false,
     cart: localStorage.getItem('userList')
@@ -18,7 +18,7 @@ const StoreProvider = ({ children }) => {
     // Reducer
     const [state, dispatch] = useReducer(storeReducer, initialState)
 
-/*     // Fetch products data from Firestore
+    // Fetch products data from Firestore
     useEffect(() => {
         const fetchData = async () => {
             const productsCollection = db.collection('products');
@@ -26,7 +26,7 @@ const StoreProvider = ({ children }) => {
             try {
                 const getData = await productsCollection.get();
                 getData.docs.forEach( product => {
-                    dispatch({ type: 'FETCH_SUCCESS', payload: { ...product.data() }})
+                    dispatch({ type: 'FETCH_SUCCESS', payload: { ...product.data(), id: product.id }})
                 })
                
             } catch (error) {
@@ -40,7 +40,7 @@ const StoreProvider = ({ children }) => {
     //Local Storage my-list
     useEffect(() => {
         localStorage.setItem("userList", JSON.stringify(state.cart));
-    }, [state]); */
+    }, [state]); 
    
     // Add product Function
     const addProduct = (product) => {
@@ -91,6 +91,7 @@ const StoreProvider = ({ children }) => {
         <StoreContext.Provider value={{
             products: state.products,
             cart: state.cart,
+            isLoading: state.isLoading,
             addProduct,
             removeProduct,
             clearList,
@@ -103,7 +104,7 @@ const StoreProvider = ({ children }) => {
             moveTop: moveTop,
             setMoveTop,
             moveTopClick,
-            dispatch
+            
         }}>
             {children}
         </StoreContext.Provider>

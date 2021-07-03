@@ -1,67 +1,6 @@
 @import "../App.scss";
 
 @media (max-width: 900px) {
-    .collapse-btn{
-        position: fixed!important;
-        top: 87%;
-        left: 3%;
-        border: none;
-        background: $colorPrincipal;
-        padding: 16px;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.15);
-        opacity: 0;
-        transition: .4s;
-        transform: translateX(-7em);
-        img {
-            width: 28px;
-            position: relative;
-            top: 2px;
-        }
-    }
-    .active {
-        transform: translateX(0);
-        opacity: 1;
-        transition: .4s;
-    }
-    .chakra-collapse{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        .css-wr6yvz{
-            padding: 0;
-            padding-bottom: 16px;
-            margin: 0 8px 0px 8px;
-            display: grid;
-            grid-template-columns: repeat(2, 50%);
-
-            .categorie_container {
-                display: flex;
-                align-items: center;
-                background: white;
-                padding: 6px;
-                margin: 8px;
-                border-radius: 0 15px 15px 15px;
-
-                img {
-                    margin-right: 8px;
-                    margin-left: 4px;
-                    max-width: 32px;
-                }
-                h3 {
-                    color: $colorPrincipal;
-                    font-size: 17px;
-                    font-weight: 400;
-                }
-            }
-        } 
-    }
-  
     .divider {
         height: 22px;
         width: 1px;
@@ -136,8 +75,8 @@
         .categoryButton_container {
             width: 100%;
             display: grid!important;
-            grid-template-columns: repeat(5, 21%);
-            padding: 0 3.5%;
+            grid-template-columns: repeat(5, 1fr);
+            align-self: center;
         }
     }
     .catButton_container {

@@ -1,0 +1,59 @@
+@import "../App.scss";
+
+@media (max-width: 900px) {
+    .collapse-btn {
+        position: fixed!important;
+        left: 3%;
+        top: 82%;
+        padding: 12px;
+        background-color: $colorPrincipal;
+        border: none;
+        border-radius: 100%;
+        box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.15);
+        transform: translateX(-8em);
+
+        img{
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    .collapse-btn-active {
+        transform: translateX(0);
+    }
+}
+
+.collapseCategories-container {
+    display: flex!important;
+    flex-direction: column;
+    background-color: $blanco;
+    padding: 0 24px;
+    border-radius: 0 0 50px 50px;
+    padding-top: 2em;
+    position: relative;
+    top: -21px;
+    .categoryBtns-container {
+        padding: 0 0 28px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        
+        .categorieCollapse_card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 8px;
+            border-radius: 0px 15px 15px 15px;
+            h3 {
+                font-size: 18px;
+                font-weight: normal;
+                color: $colorPrincipal;
+                margin-left: 6px;
+            }
+            img {
+                max-width: 32px;
+            }
+         
+        }
+    }
+}

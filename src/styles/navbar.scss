@@ -45,12 +45,12 @@
             }
         }
         .sections__container {
-            padding: 0 16px 16px 16px;
             width: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
             .nav-link {
+                z-index: 3;
                 width: 45%;
                 color: rgba(0, 0, 0, 0.904);
                 font-size: 20px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {NavLink, Link} from 'react-router-dom'
-import '../../../styles/categories.scss'
+import '../../../styles/categories-home.scss'
 
 const CategoryButton = ({cat}) => {
 

@@ -18,9 +18,11 @@
     }
 
     .product-card__container {
+        height: 140px;
         background-color: $blanco;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         align-items: center;
         border-radius: 20px;
         padding: 8px;
@@ -55,9 +57,9 @@
 
         .card-product__name {
             color: $colorPrincipal;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
-            margin-bottom: 8px;
+            text-align: center;
         }
         
     }
