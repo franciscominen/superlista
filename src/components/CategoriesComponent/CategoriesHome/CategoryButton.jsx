@@ -11,7 +11,11 @@ const CategoryButton = ({cat}) => {
     };
 
     return (
-        <NavLink to={link} className='catButton_container' activeClassName='catButton_container-active'>
+        <NavLink 
+            to={link} 
+            className='catButton_container'
+            activeClassName='catButton_container-active'
+        >
             
             <Link to={'/productos'} className='closeCategory_btn'>
                 <img src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FcloseCategory.svg?alt=media&token=c6c167a1-785a-4ad8-aeb2-1e87c76d105b'} alt="x" />

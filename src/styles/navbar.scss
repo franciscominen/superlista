@@ -5,19 +5,6 @@
         transition: .3s;
     }
     .navbar {
-   /*      background-color: $blanco;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        border-radius: 0 0 30px 30px;
-
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        z-index: 5; */
 
         header {
             display: flex;
@@ -67,6 +54,7 @@
                 align-items: center;
             }
             .divider-nav {
+                z-index: 2;
                 height: 36px;
                 width: 1px;
                 background: $colorPrincipal;
@@ -138,4 +126,8 @@
 }
 .nav-link:hover::after {
     width: 102px;
+}
+
+.categoryCollapse-disabled {
+    display: none;
 }

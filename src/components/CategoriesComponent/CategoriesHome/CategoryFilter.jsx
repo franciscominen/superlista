@@ -2,9 +2,10 @@ import React, { useContext, useState } from "react";
 import "../../../styles/categories-home.scss";
 import { categoriesData } from "../categoriesData";
 import CategoryButton from "./CategoryButton";
-import { Collapse, Box, Button, useDisclosure } from "@chakra-ui/react";
+import { Collapse, useDisclosure } from "@chakra-ui/react";
 import { StoreContext } from "../../../context/StoreProvider";
 import Loader from "../../../utils/Loader";
+import { Animated } from "react-animated-css";
 
 const CategoryFilter = () => {
   const { isLoading } = useContext(StoreContext);
@@ -38,11 +39,13 @@ const CategoryFilter = () => {
         {isLoading ? (
           <Loader />
         ) : (
+          <Animated animationIn='fadeIn' animationInDuration='500'>
           <Collapse in={isOpen === false} className="categoryButton_container">
             {categoriesData.map((categoria) => {
               return <CategoryButton key={categoria.index} cat={categoria} />;
             })}
           </Collapse>
+          </Animated>
         )}
       </section>
     </>

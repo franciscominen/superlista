@@ -1,44 +1,38 @@
 import React from "react";
 import "../../styles/product-cards.scss";
 import AddNoteModal from "../Modals/AddNoteModal";
-import { toast, Slide } from "react-toastify";
-import { useParams } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+import { Animated } from "react-animated-css";
 
 const ProductCard = ({ product, addProduct }) => {
-  const categoryID = useParams();
 
-  const Msg = () => (
-    <div className="toast_msj">
-      <p>
-        Agregaste <span>{product.name}</span> a tu lista.
-      </p>
-    </div>
-  );
+  const Msg = () => {
+    return <p> Agregaste <strong>{product.name}</strong> a tu lista. </p>
+  }
 
-  const notify = () =>
-    toast(<Msg />, {
-      position: "bottom-center",
-      autoClose: 1500,
-      hideProgressBar: true,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      transition: Slide,
-    });
+  const notify = () => toast(<Msg/>, {
+    duration: 1200,
+    position: 'bottom-center',
+  });
+
+  const handleProduct = () => {
+    addProduct(product)
+    notify()
+  }
 
   return (
-    <div key={product.id} className="product-card__container">
+
+    <Animated animationIn='zoomIn' animationInDuration='300' key={product.id} className="product-card__container"> 
+
       <div className="btns-card__container">
-        <AddNoteModal product={product} notify={notify} />
+        <AddNoteModal product={product}  notify={notify}/>
 
         <button
           className="btn-addProduct"
           type="button"
-          onClick={() => addProduct(product)}
+          onClick={() => handleProduct()}
         >
           <img
-            onClick={notify}
             src={
               "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FaddIcon.svg?alt=media&token=a3cbf288-fd89-4586-a628-ffd80fd1815d"
             }
@@ -56,7 +50,8 @@ const ProductCard = ({ product, addProduct }) => {
       </div>
 
       <h2 className="card-product__name">{product.name}</h2>
-    </div>
+
+    </Animated>
   );
 };
 
