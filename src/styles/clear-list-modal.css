@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@media (max-width: 900px) {
+  .clearList_btn {
+    background: #232323;
+    position: fixed;
+    padding: 8px;
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 85%;
+    left: 4%;
+    -webkit-box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+  .modal__clearList {
+    background: #F8F8F8;
+    width: 80%;
+    margin: auto;
+    border-radius: 35px;
+    padding: 24px 16px;
+    margin-top: 13em;
+  }
+  .modal__clearList .header__clearList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .modal__clearList .header__clearList h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+    color: #232323;
+  }
+  .modal__clearList .header__clearList .close_btn {
+    position: relative;
+    background: none;
+    border: none;
+    left: 0;
+    left: 34px;
+    max-width: 21px;
+  }
+  .modal__clearList .content__clearList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 16px 0 0 0;
+  }
+  .modal__clearList .content__clearList .btn_si {
+    width: 136px;
+    height: 55px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #8D8D8D;
+    background: #F5F5F5;
+    border: 2px solid #D2D2D2;
+    border-radius: 20px;
+    padding: 4px 0;
+    margin: 8px;
+    margin-bottom: 0;
+  }
+  .modal__clearList .content__clearList .btn_no {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 136px;
+    height: 55px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #F8F8F8;
+    background: #D2D2D2;
+    border: 2px solid #D2D2D2;
+    border-radius: 20px;
+    padding: 4px 0;
+    margin: 8px;
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=clear-list-modal.css.map */

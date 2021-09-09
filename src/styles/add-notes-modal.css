@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@media (max-width: 900px) {
+  .addNote__btn {
+    background: none;
+    border: none;
+  }
+  .modal-img__myList {
+    max-width: 21px;
+  }
+  .popup-content {
+    background: #27272777;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  .popup-content .modal {
+    background: #F8F8F8;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    padding: 24px 36px;
+    top: 2em;
+    border-radius: 35px;
+  }
+  .popup-content .modal .close-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    right: 20px;
+    top: 20px;
+  }
+  .popup-content .modal .close-btn img {
+    max-width: 21px;
+  }
+  .popup-content .modal .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 16px;
+  }
+  .popup-content .modal .header img {
+    max-width: 52px;
+  }
+  .popup-content .modal .header h1 {
+    color: #232323;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+  .popup-content .modal .content {
+    margin: auto;
+  }
+  .popup-content .modal .content .note_input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #8D8D8D;
+    border-radius: 0;
+    padding: 8px 0;
+    width: 100%;
+    color: #232323;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .popup-content .modal .content .note_input::-webkit-input-placeholder {
+    color: #8D8D8D;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .popup-content .modal .content .note_input:-ms-input-placeholder {
+    color: #8D8D8D;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .popup-content .modal .content .note_input::-ms-input-placeholder {
+    color: #8D8D8D;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .popup-content .modal .content .note_input::placeholder {
+    color: #8D8D8D;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .popup-content .addNoteList_btn {
+    width: 200px;
+    height: 45px;
+    margin: auto;
+    position: absolute;
+    top: 11em;
+    left: 0;
+    right: 0;
+    border: none;
+    border-radius: 24px;
+    background: #232323;
+    color: #F8F8F8;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .popup-content .addNoteList_btn span {
+    height: 20px;
+  }
+}
+/*# sourceMappingURL=add-notes-modal.css.map */

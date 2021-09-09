@@ -15,74 +15,41 @@
         top: 85%;
         left: 4%;
         box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.15);
+        z-index: 4;
     }
-
-    .modal__clearList {
-        background: $blanco;
-        width: 80%;
-        margin: auto;
-        border-radius: 35px;
-        padding: 24px 16px;
-        margin-top: 13em;
-
-        .header__clearList {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            h1 {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 25px;
-                line-height: 32px;
-                color: $colorPrincipal;
-            }
-
-            .close_btn {
-                position: relative;
-                background: none;
-                border: none;
-                left: 0;
-                left: 34px;
-                max-width: 21px;
-            }
+    
+    .clearList_confirmBtn {
+        background-color: $grisOscuro;
+        border: none;
+        padding: 16px;
+        border-radius: 150px;
+        position: fixed;
+        top: 85%;
+        left: -20em;
+        z-index: 3;
+        transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        opacity: 0;
+        p {
+            font-size: 17px;
+            color: $blanco;
+            margin-left: 3em;
         }
-
-        .content__clearList {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 16px 0 0 0;
-
-            .btn_si {
-                width: 136px;
-                height: 55px;
-                font-size: 25px;
-                font-weight: 600;
-                color: $grisOscuro;
-                background: #F5F5F5;
-                border: 2px solid $gris;
-                border-radius: 20px;
-                padding: 4px 0;
-                margin: 8px;
-                margin-bottom: 0;
-            }
-            .btn_no {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 136px;
-                height: 55px;
-                font-size: 25px;
-                font-weight: 600;
-                color: $blanco;
-                background: $gris;
-                border: 2px solid $gris;
-                border-radius: 20px;
-                padding: 4px 0;
-                margin: 8px;
-                margin-bottom: 0;
-            }
+    }
+    .handle_ClearList {
+        background-color: $grisOscuro;
+        border: none;
+        padding: 16px;
+        border-radius: 150px;
+        position: fixed;
+        top: 85%;
+        left: 4%;
+        z-index: 3;
+        opacity: 1;
+        transition: left .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        p {
+            font-size: 17px;
+            color: $blanco;
+            margin-left: 3em;
         }
     }
 }

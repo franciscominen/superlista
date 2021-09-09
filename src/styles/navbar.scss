@@ -1,133 +1,165 @@
 @import "../App.scss";
 @media (max-width: 900px) {
-    .moverArriba {
-        transform: translateY(-5em);
-        transition: .3s;
-    }
-    .navbar {
+  .moverArriba {
+    transform: translateY(-5em);
+    transition: 0.3s;
+  }
+  .navbar {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 16px 24px;
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 16px 24px;
+      .search_btn {
+        border: none;
+        background: none;
+        transition: 0.3s;
+      }
 
-            .search-btn{
-                border: none;
-                background: none;
-            }
-            
-            .search-logo_container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                margin: 0 16px;
-                img {
-                    position: absolute;
-                    transition: .3s;
-                }
-            }
-        }
-        .sections__container {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            .nav-link {
-                z-index: 3;
-                width: 45%;
-                color: rgba(0, 0, 0, 0.904);
-                font-size: 20px;
-                font-weight: 400;
-                padding: 3px 10px 5px 10px;
-                vertical-align: middle;
-                border-radius: 7px;
-                text-align: center;
-            }
-            .navLink-active {
-                font-weight: 600;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .divider-nav {
-                z-index: 2;
-                height: 36px;
-                width: 1px;
-                background: $colorPrincipal;
-                display: block;
-                unicode-bidi: -webkit-isolate;
-                unicode-bidi: isolate;
-                margin-block-start: 0;
-                margin-block-end: 0;
-                margin-inline-start: auto;
-                margin-inline-end: auto;
-                overflow: auto;
-                border-style: none;
-                border-width: 0;
-            }
-            
-        }
-        .components__container {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            padding: 16px 8px 0 8px;
-        }
-    }
-
-    .search_container {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        input {
-          width: 100%;
-          background: none;
-          border: none;
-          border: none;
-          border-bottom: 0.5px solid #232323;
-          border-radius: 0px;
-          padding: 3px;
-          padding-bottom: 6px;
-          outline: none;
-          font-size: 17px;
-          font-weight: 300;
-          color: #232323;
-          transition: .3s;
-        }
-      
-        ::placeholder {
-          font-size: 17px;
-          outline: none;
-          font-weight: 400;
-          color: $colorPrincipal;
+      .search_backBtn {
+        border: none;
+        background: none;
+        position: absolute;
+        transition: 0.3s;
+        img {
+          width: 24px;
         }
       }
+
+      .search-logo_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 16px;
+        transition: 0.3s;
+
+        img {
+          position: absolute;
+          transition: 0.3s;
+        }
+
+        .search_container {
+          transition: .3s;
+        }
+
+        .btn_clearSearch {
+          background: $grisOscuro;
+          position: relative;
+          border: none;
+          width: 24px;
+          height: 22px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          right: 1.6em;
+        }
+        .btn_clearSearch--none {
+          display: none;
+        }
+      }
+    }
+
+    .sections__container {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .nav-link {
+        z-index: 3;
+        width: 45%;
+        color: rgba(0, 0, 0, 0.904);
+        font-size: 20px;
+        font-weight: 400;
+        padding: 3px 10px 5px 10px;
+        vertical-align: middle;
+        border-radius: 7px;
+        text-align: center;
+      }
+      .navLink-active {
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .divider-nav {
+        z-index: 2;
+        height: 36px;
+        width: 1px;
+        background: $colorPrincipal;
+        display: block;
+        unicode-bidi: -webkit-isolate;
+        unicode-bidi: isolate;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        overflow: auto;
+        border-style: none;
+        border-width: 0;
+      }
+    }
+    .components__container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 16px 8px 0 8px;
+    }
+  }
+
+  .search_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    input {
+      width: 100%;
+      background: none;
+      border: none;
+      border: none;
+      border-bottom: 0.5px solid #232323;
+      border-radius: 0px;
+      padding: 3px;
+      padding-bottom: 6px;
+      outline: none;
+      font-size: 17px;
+      font-weight: 300;
+      color: #232323;
+      transition: 0.3s;
+    }
+
+    ::placeholder {
+      font-size: 17px;
+      outline: none;
+      font-weight: 400;
+      color: $colorPrincipal;
+    }
+  }
 }
 
 .nav-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: $colorPrincipal;
-    transition: width .3s;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $colorPrincipal;
+  transition: width 0.3s;
 }
 .navLink-active::after {
-    content: '';
-    display: block;
-    width: 102px;
-    height: 2px;
-    background: $colorPrincipal;
-    transition: width .3s;
+  content: "";
+  display: block;
+  width: 102px;
+  height: 2px;
+  background: $colorPrincipal;
+  transition: width 0.3s;
 }
 .nav-link:hover::after {
-    width: 102px;
+  width: 102px;
 }
 
 .categoryCollapse-disabled {
-    display: none;
+  display: none;
 }

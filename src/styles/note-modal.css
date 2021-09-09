@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@media (max-width: 900px) {
+  .modalMenu_btn img {
+    max-width: 21px;
+    margin-right: 16px;
+  }
+  .closeNoteModal {
+    max-width: 21px;
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+  }
+  .noteModalInfo_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .noteModalInfo_container img {
+    max-width: 54px;
+    margin-right: 8px;
+  }
+  .noteModalInfo_container h1 {
+    color: #232323;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .formNote_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 16px;
+  }
+  .formNote_container input {
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #D2D2D2;
+    width: 85%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #232323;
+    padding-bottom: 8px;
+    outline: none;
+  }
+  .formNote_container input::-webkit-input-placeholder {
+    font-size: 18px;
+    color: #8D8D8D;
+    font-weight: 500;
+  }
+  .formNote_container input:-ms-input-placeholder {
+    font-size: 18px;
+    color: #8D8D8D;
+    font-weight: 500;
+  }
+  .formNote_container input::-ms-input-placeholder {
+    font-size: 18px;
+    color: #8D8D8D;
+    font-weight: 500;
+  }
+  .formNote_container input::placeholder {
+    font-size: 18px;
+    color: #8D8D8D;
+    font-weight: 500;
+  }
+  .formNote_container .guardar-btn {
+    position: absolute;
+    top: 9.5em;
+    background: #232323;
+    border: none;
+    color: #F8F8F8;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 34px;
+    border-radius: 25px;
+  }
+}
+/*# sourceMappingURL=note-modal.css.map */

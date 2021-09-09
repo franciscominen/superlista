@@ -7,7 +7,15 @@ import CategoriesCollapse from "../CategoriesComponent/CategoriesCollapse/Catego
 import OnWorkComponent from "./ShareComponent/OnWorkComponent";
 
 const Navbar = () => {
-  const { moveTop, setMoveTop, moveTopClick, clearSearch } = useContext(StoreContext);
+  const { moveTop, setMoveTop, moveTopClick, clearSearch } =
+    useContext(StoreContext);
+
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handelSearchButton = () => {
+    moveTopClick();
+  };
 
   function debounce(func, wait, immediate) {
     var timeout;
@@ -24,9 +32,6 @@ const Navbar = () => {
       if (callNow) func.apply(context, args);
     };
   }
-
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
@@ -64,18 +69,36 @@ const Navbar = () => {
       style={{ ...navbarStyles, top: visible ? "0" : "-48px" }}
     >
       <header>
-        <button onClick={clearSearch} type="submit" className="search-btn">
+        {/* BTN SEARCH */}
+        <button
+          onClick={handelSearchButton}
+          type="submit"
+          className={moveTop ? "search_btn moverArriba" : "search_btn"}
+        >
           <img
             src={
               "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FsearchIcon.svg?alt=media&token=0c0b6eb1-4888-4459-b4db-b0d7718882ef"
             }
             alt=""
-            onClick={moveTopClick}
           />
         </button>
 
+        {/* BTN BACK */}
+        <button
+          onClick={handelSearchButton}
+          className={moveTop ? "search_backBtn" : "search_backBtn moverArriba"}
+        >
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FbackArrow.svg?alt=media&token=f0632c97-b704-4715-8d8b-9604e921f873"
+            alt="<"
+            onClick={clearSearch}
+          />
+        </button>
+
+        {/* LOGO/SEARCHCOMPONENT CONTAINER */}
         <div className="search-logo_container">
           <SearchComponent />
+
           <img
             className={moveTop ? "moverArriba" : ""}
             src={
@@ -86,7 +109,7 @@ const Navbar = () => {
           />
         </div>
 
-        <OnWorkComponent/>
+        <OnWorkComponent />
       </header>
 
       <div className="sections__container">
@@ -109,10 +132,15 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-    <div className={window.location.href === 'https://superlista.ar/mi-lista' ? 'categoryCollapse-disabled' : ''}>
-        <CategoriesCollapse/>  
-    </div>
-    
+      <div
+        className={
+          window.location.href === "https://superlista.ar/mi-lista"
+            ? "categoryCollapse-disabled"
+            : ""
+        }
+      >
+        <CategoriesCollapse />
+      </div>
     </nav>
   );
 };

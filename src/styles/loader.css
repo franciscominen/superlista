@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@-webkit-keyframes loader {
+  100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+}
+
+@keyframes loader {
+  100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+}
+
+.search_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.search_container input {
+  width: 100%;
+  background: none;
+  border: none;
+  border: none;
+  border-bottom: 0.5px solid #232323;
+  border-radius: 0px;
+  padding: 3px;
+  padding-bottom: 6px;
+  outline: none;
+  font-size: 17px;
+  font-weight: 300;
+  color: #232323;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.search_container ::-webkit-input-placeholder {
+  font-size: 17px;
+  outline: none;
+  font-weight: 400;
+  color: #232323;
+}
+
+.search_container :-ms-input-placeholder {
+  font-size: 17px;
+  outline: none;
+  font-weight: 400;
+  color: #232323;
+}
+
+.search_container ::-ms-input-placeholder {
+  font-size: 17px;
+  outline: none;
+  font-weight: 400;
+  color: #232323;
+}
+
+.search_container ::placeholder {
+  font-size: 17px;
+  outline: none;
+  font-weight: 400;
+  color: #232323;
+}
+
+.circle-loader {
+  margin: 5em auto;
+  border: 1px solid #D2D2D2;
+  border-left-color: #232323;
+  -webkit-animation: loader-spin .8s infinite ease;
+          animation: loader-spin .8s infinite ease;
+  position: relative;
+  vertical-align: top;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+
+.checkmark {
+  display: none;
+}
+
+.checkmark.draw:after {
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-name: checkmark;
+          animation-name: checkmark;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+          transform: scaleX(-1) rotate(135deg);
+}
+
+.checkmark:after {
+  opacity: 1;
+  height: 2em;
+  width: 1em;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  border-right: 3px solid #232323;
+  border-top: 3px solid #232323;
+  content: '';
+  left: 1em;
+  top: 2em;
+  position: absolute;
+}
+
+@-webkit-keyframes loader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 1em;
+    opacity: 1;
+  }
+  40% {
+    height: 2em;
+    width: 1em;
+    opacity: 1;
+  }
+  100% {
+    height: 2em;
+    width: 1em;
+    opacity: 1;
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 1em;
+    opacity: 1;
+  }
+  40% {
+    height: 2em;
+    width: 1em;
+    opacity: 1;
+  }
+  100% {
+    height: 2em;
+    width: 1em;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=loader.css.map */

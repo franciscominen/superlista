@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@media (max-width: 900px) {
+  .list_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 16px;
+  }
+  .producList_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: 8px 0px;
+    padding: 16px 8px;
+    height: 70px;
+    border-radius: 20px;
+    background: #F8F8F8;
+  }
+  .producList_container .product_detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 8px;
+  }
+  .producList_container .product_detail img {
+    max-width: 50px;
+    margin-right: 8px;
+  }
+  .producList_container .product_detail h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #232323;
+    margin-bottom: -4px;
+  }
+  .producList_container .product_detail p {
+    font-size: 16px;
+    color: #8D8D8D;
+    overflow-x: scroll;
+    width: 185px;
+  }
+  .producList_container .btns_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 8px;
+  }
+  .producList_container .btns_container .close_btn {
+    background: none;
+    border: none;
+    margin-left: 16px;
+  }
+  .producList_container .btns_container .close_btn img {
+    max-width: 21px;
+  }
+  .emptyList_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    color: #D2D2D2;
+    margin: 3em auto;
+  }
+  .emptyList_container .carita {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 16px 0;
+  }
+  .emptyList_container h1 {
+    font-size: 18px;
+    width: 12em;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 16px 0;
+  }
+  .emptyList_container .volverProductos_btn {
+    background: #D2D2D2;
+    border: 1px solid #8D8D8D;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin: 16px 0;
+  }
+  .list-empty__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    height: 70vh;
+  }
+  .list-empty__container h1 {
+    color: #8D8D8D;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+    width: 278px;
+    margin: 8px 0 24px 0;
+  }
+  .list-empty__container .backProducts_btn {
+    background: #F5F5F5;
+    border: 1px solid #D2D2D2;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    color: #8D8D8D;
+    padding: 8px 24px;
+  }
+}
+/*# sourceMappingURL=my-list.css.map */

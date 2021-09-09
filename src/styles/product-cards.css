@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@media (max-width: 900px) {
+  .products_title {
+    color: #232323;
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0 16px 3%;
+  }
+  .products_container {
+    margin: 0 3%;
+    margin-bottom: 1.5em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (31%)[3];
+        grid-template-columns: repeat(3, 31%);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-row-gap: 12px;
+  }
+  .product-card__container {
+    height: 140px;
+    background-color: #F8F8F8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 20px;
+    padding: 8px;
+  }
+  .product-card__container .btns-card__container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .product-card__container .btns-card__container .btn-addProduct {
+    background: none;
+    border: none;
+  }
+  .product-card__container .cardImg_container {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+  }
+  .product-card__container .cardImg_container img {
+    width: 100%;
+    height: auto;
+  }
+  @supports ((-o-object-fit: cover) or (object-fit: cover)) {
+    .product-card__container .cardImg_container img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center center;
+         object-position: center center;
+    }
+  }
+  .product-card__container .card-product__name {
+    color: #232323;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=product-cards.css.map */

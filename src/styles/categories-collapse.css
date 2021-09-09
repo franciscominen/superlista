@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@media (max-width: 900px) {
+  .collapse-btn {
+    position: fixed !important;
+    left: 3%;
+    top: 82%;
+    padding: 12px;
+    background-color: #232323;
+    border: none;
+    border-radius: 100%;
+    -webkit-box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.15);
+            box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateX(-8em);
+            transform: translateX(-8em);
+  }
+  .collapse-btn img {
+    position: relative;
+    top: 2px;
+  }
+  .collapse-btn-active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.collapseCategories-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #F8F8F8;
+  padding: 0 24px;
+  border-radius: 0 0 50px 50px;
+  padding-top: 2em;
+  position: relative;
+  top: -21px;
+}
+
+.collapseCategories-container .categoryBtns-container {
+  padding: 0 0 28px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.collapseCategories-container .categoryBtns-container .categorieCollapse_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 0px 15px 15px 15px;
+}
+
+.collapseCategories-container .categoryBtns-container .categorieCollapse_card h3 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #232323;
+  margin-left: 6px;
+}
+
+.collapseCategories-container .categoryBtns-container .categorieCollapse_card img {
+  max-width: 32px;
+}
+/*# sourceMappingURL=categories-collapse.css.map */

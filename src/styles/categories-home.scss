@@ -1,128 +1,140 @@
 @import "../App.scss";
 
 @media (max-width: 900px) {
-    .divider {
-        height: 22px;
-        width: 1px;
-        background: rgba(0, 0, 0, 0.178);
-        display: block;
-        unicode-bidi: isolate;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-start: auto;
-        margin-inline-end: auto;
-        overflow: auto;
-        border-style: none;
-        border-width: 0;
+  .divider {
+    height: 22px;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.178);
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: auto;
+    border-style: none;
+    border-width: 0;
+  }
+
+  .carousel-container {
+    margin: 16px 0px 8px 0px;
+    &:hover {
+      overflow: hidden;
+    }
+    .carousel-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .img-container {
+        background: $blanco;
+        padding: 8px;
+        border-radius: 0 15px 15px 15px;
+
+        img {
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 8px;
+        color: $colorPrincipal;
+      }
+    }
+  }
+
+  .categoryFilter_container {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0;
+
+    .title_container {
+      margin: 0 3.5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        color: $colorPrincipal;
+        font-size: 17px;
+        font-weight: 800;
+      }
+      img {
+        max-width: 20px;
+        transition: 0.3s;
+      }
+      .rotate {
+        transition: 0.3s;
+        transform: rotate(180deg);
+      }
     }
 
-    .carousel-container {
-        margin: 16px 0px 8px 0px;
-        &:hover {
-            overflow: hidden;
-        }
-        .carousel-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .img-container {
-                background: $blanco;
-                padding: 8px;
-                border-radius: 0 15px 15px 15px;
-                
-                img {
-                    width: 64px;
-                    height: 64px;
-                }
-            }
-            
-            p {
-                font-size: 14px;
-                font-weight: 500;
-                margin-top: 8px;
-                color: $colorPrincipal;
-            }
-        }
+    .categoryButton_container {
+      width: 100%;
+      display: grid !important;
+      grid-template-columns: repeat(5, 1fr);
+      align-self: center;
+      grid-row-gap: 16px;
+      margin-top: 8px;
     }
+  }
 
-    .categoryFilter_container {
+  // CATEGORY COLLAPSE
+  .catButton_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .catImg_container {
+      background: $blanco;
+      padding: 8px;
+      border-radius: 0 15px 15px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s;
+
+      img {
+        max-width: 40px;
+      }
+      .closeCategory_btn {
+        display: none;
+        opacity: 0;
+      }
+    }
+    h3 {
+      font-size: 13px;
+      font-weight: 400;
+      margin-top: 8px;
+      color: $colorPrincipal;
+    }
+  }
+
+  .catButton_container-active {
+    .catImg_container {
+      background: $colorPrincipal;
+      padding: 15px;
+      transition: background 0.2s;
+      .category_img {
+        display: none;
+      }
+
+      .closeCategory_btn {
         display: flex;
-        flex-direction: column;
-        margin: 24px 0;
-        .title_container {
-            margin: 0 3.5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            h1 {
-                color: $colorPrincipal;
-                font-size: 17px;
-                font-weight: 800;
-            }
-            img {
-                max-width: 20px;
-                transition: .3s;
-            }
-            .rotate {
-                transition: .3s;
-                transform: rotate(180deg);
-            }
+        background-color: $gris;
+        padding: 8px;
+        border-radius: 100px;
+        opacity: 1;
+        transition: 0.2s;
+        img {
+          width: 10px;
         }
-
-        .categoryButton_container {
-            width: 100%;
-            display: grid!important;
-            grid-template-columns: repeat(5, 1fr);
-            align-self: center;
-        }
+      }
     }
-    .catButton_container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .catImg_container {
-            background: $blanco;
-            padding: 8px;
-            border-radius: 0 15px 15px 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-                max-width: 40px;
-            }
-        }
-        h3{
-            font-size: 13px;
-            font-weight: 400;
-            margin-top: 8px;
-            color: $colorPrincipal;
-        }
-        .closeCategory_btn {
-            background-color: $colorPrincipal;
-            border-radius: 100%;
-
-            padding: 4px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            top: 10px;
-            left: 27px;
-            transition: all .3s;
-            opacity: 0;
-            img {
-                max-width: 9px;
-            }
-        }
-    }
-    .catButton_container-active {
-        .closeCategory_btn {
-            transition: all .3s;
-            opacity: 1;
-        }
-    }
+  }
 }

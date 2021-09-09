@@ -4,6 +4,7 @@ import { StoreContext } from '../../context/StoreProvider'
 import MyListCard from './MyListCard'
 import MyListEmpty from './MyListEmpty'
 import ClearListModal from '../Modals/ClearListModal'
+import ClearListButton from '../Modals/ClearListButton'
 
 const MyListContainer = () => {
     const {cart} = useContext(StoreContext)
@@ -21,7 +22,8 @@ const MyListContainer = () => {
                         ))}
                     </section>
 
-                    <ClearListModal/>
+                    {/* <ClearListModal/> */}
+                    <ClearListButton/>
                 </>
             }
         </>
