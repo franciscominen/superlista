@@ -118,16 +118,21 @@
   .catButton_container-active {
     .catImg_container {
       background: $colorPrincipal;
-      padding: 15px;
+
       transition: background 0.2s;
       .category_img {
-        display: none;
+        opacity: 0;
       }
 
       .closeCategory_btn {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
         background-color: $gris;
         padding: 8px;
+        width: 29px;
+        height: 29px;
         border-radius: 100px;
         opacity: 1;
         transition: 0.2s;

@@ -6,17 +6,10 @@ const SearchComponent = () => {
   const { setSearchTerm, moveTop, searchTerm, clearSearch } =
     useContext(StoreContext);
 
-  const [btnClearSearch, setBtnClearSearch] = useState(false);
-  function handleClearSearch() {
-    if (searchTerm.length > 0) {
-      return setBtnClearSearch(true);
-    } else {
-      setBtnClearSearch(false);
-    }
-  }
+  // Cambiar clearSearch por backSearchToProductos.
+  // Crear funcion para btn__clearSearch que solo vacie el input y quede en ::focus.
+  // Resolver el prevent default del teclado mobile.
 
-  console.log(searchTerm.length);
-  console.log(btnClearSearch);
   return (
     <>
       <form
