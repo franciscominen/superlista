@@ -88,6 +88,7 @@ const StoreProvider = ({ children }) => {
   const [moveTop, setMoveTop] = useState(false);
   const moveTopClick = () => {
     moveTop ? setMoveTop(false) : setMoveTop(true);
+    document.getElementById('search').focus();
   };
 
   return (
