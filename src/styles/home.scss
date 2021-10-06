@@ -6,7 +6,7 @@
 }
 
 @keyframes move {
-    100% {transform: translateY(-10.5em);}
+    100% {transform: translateY(-5.5em);}
 }
 
 @media (max-width: 900px) {
@@ -24,10 +24,16 @@
         display: flex;
         flex-direction: column;
         .logo_big {
+            font-size: 32px;
+            color: $colorPrincipal;
+            letter-spacing: -1px;
             position: absolute;
             opacity: 0;
-            transform: translateY(-2em);
+            transform: translateY(-3em);
             animation: fade .7s ease-in .5s forwards, move 1s ease 2s forwards;
+            span {
+                font-weight: 400;
+            }
         }
         
         .homeBtns_container {

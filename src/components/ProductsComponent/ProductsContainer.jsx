@@ -15,7 +15,7 @@ const ProductsContainer = () => {
   return (
     <>
       <CategoryFilter />
-
+      <figure style={{width:'94%', margin:'0 auto', background:'#D2D2D2', height:'1px'}}/>
       <h1 className="products_title">Productos</h1>
       {isLoading ? (
         <Loader />
@@ -57,7 +57,7 @@ const ProductsContainer = () => {
         toastOptions={{
           className: "",
           style: {
-            background: 'rgb(245 245 245 / 90%)',
+            background: 'rgb(245 245 245 / 97%)',
             border: '1px solid #D2D2D2',
             boxSizing: 'border-box',
             borderRadius: '20px',

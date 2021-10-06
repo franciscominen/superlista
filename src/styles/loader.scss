@@ -3,33 +3,6 @@
     100% {transform: rotateZ(180deg);}
 }
 
-.search_container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  input {
-    width: 100%;
-    background: none;
-    border: none;
-    border: none;
-    border-bottom: 0.5px solid #232323;
-    border-radius: 0px;
-    padding: 3px;
-    padding-bottom: 6px;
-    outline: none;
-    font-size: 17px;
-    font-weight: 300;
-    color: #232323;
-    transition: .3s;
-  }
-
-  ::placeholder {
-    font-size: 17px;
-    outline: none;
-    font-weight: 400;
-    color: $colorPrincipal;
-  }
-}
 
 
 $brand-success: #5cb85c;

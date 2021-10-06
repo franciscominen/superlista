@@ -89,7 +89,7 @@ const Navbar = () => {
           className={moveTop ? "search_backBtn" : "search_backBtn moverArriba"}
         >
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FbackArrow.svg?alt=media&token=f0632c97-b704-4715-8d8b-9604e921f873"
+            src="https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FbackArrowIcon.svg?alt=media&token=eee22626-5fbc-4af1-b2f5-c910942c3146"
             alt="<"
             onClick={clearSearch}
           />
@@ -99,14 +99,9 @@ const Navbar = () => {
         <div className="search-logo_container">
           <SearchComponent />
 
-          <img
-            className={moveTop ? "moverArriba" : ""}
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FlogoNav.svg?alt=media&token=d1640544-9de0-4fe9-bab5-1e5e2cb9f03d"
-            }
-            alt=""
-            style={{ maxWidth: "114px" }}
-          />
+          <h1 className={moveTop ? "moverArriba logo_nav" : "logo_nav"}>
+            Superlista<span>.ar</span>
+          </h1>
         </div>
 
         <OnWorkComponent />

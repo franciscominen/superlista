@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^8.4.2",
     "framer-motion": "^4.1.9",
+    "hide-virtual-keyboard": "^1.0.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-animated-css": "^1.2.1",

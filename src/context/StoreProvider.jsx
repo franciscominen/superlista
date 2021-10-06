@@ -1,8 +1,6 @@
 import { createContext, useState, useReducer, useEffect } from "react";
 import storeReducer from "./StoreReducer";
-import { useParams } from "react-router-dom";
 import { db } from "../firebaseConfig";
-import { productsData } from "../data/dataProducts";
 
 const initialState = {
   products: [],

@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useContext, useRef } from "react";
 import "../../../styles/navbar.scss";
 import { StoreContext } from "../../../context/StoreProvider";
 
@@ -17,8 +17,16 @@ const SearchComponent = () => {
 
   const [input1Ref, setInput1Focus] = UseFocus();
 
-  // Auto focus al apreta la lupa? 
-  
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      input1Ref.current.blur();
+    }
+  };
+
   return (
     <>
       <form
@@ -26,9 +34,10 @@ const SearchComponent = () => {
         className={
           moveTop ? "search_container" : "search_container moverArriba"
         }
+        onSubmit={submitHandler}
       >
         <input
-          className="search"
+          className="input_search"
           type="text"
           placeholder="Buscar producto"
           onChange={(event) => {
@@ -37,6 +46,7 @@ const SearchComponent = () => {
           id="search"
           value={searchTerm}
           ref={input1Ref}
+          onKeyPress={handleEnter}
         />
         <button
           className="btn_clearSearch"
@@ -47,8 +57,9 @@ const SearchComponent = () => {
           }}
         >
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FclearSearchIcon.svg?alt=media&token=3a7fecc0-d329-4645-963b-fcfa8a9a8f70"
-            alt=""
+            src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FbtnClearSearch.svg?alt=media&token=62a787d6-6506-49ea-bba6-797fe03e65fd'}
+            alt="X"
+            className="clearSearch_img"
           />
         </button>
       </form>

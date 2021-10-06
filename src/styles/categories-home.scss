@@ -50,13 +50,13 @@
   .categoryFilter_container {
     display: flex;
     flex-direction: column;
-    margin: 24px 0;
+    margin: 24px 0 16px 0;
 
     .title_container {
-      margin: 0 3.5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin: 0 3% 8px 3%;
 
       h1 {
         color: $colorPrincipal;
@@ -74,12 +74,12 @@
     }
 
     .categoryButton_container {
-      width: 100%;
       display: grid !important;
       grid-template-columns: repeat(5, 1fr);
-      align-self: center;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
       grid-row-gap: 16px;
-      margin-top: 8px;
+      padding-top: 0;
     }
   }
 
@@ -110,14 +110,14 @@
     h3 {
       font-size: 13px;
       font-weight: 400;
-      margin-top: 8px;
+      margin-top: 4px;
       color: $colorPrincipal;
     }
   }
 
   .catButton_container-active {
     .catImg_container {
-      background: $colorPrincipal;
+      background: #3e3e3e;
 
       transition: background 0.2s;
       .category_img {

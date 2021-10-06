@@ -28,10 +28,11 @@
     flex-direction: column;
     background-color: $blanco;
     padding: 0 24px;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 26px 26px;
     padding-top: 2em;
     position: relative;
     top: -21px;
+    border-bottom: 8px solid white;
     .categoryBtns-container {
         padding: 0 0 28px 0;
         display: grid;
