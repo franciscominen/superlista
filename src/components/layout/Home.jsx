@@ -2,12 +2,18 @@ import React from "react";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
+import CarouselHome from "./CarouselHome";
 
 const Home = () => {
   return (
     <>
       <section className="home">
-        <h1 className='logo_big'>Superlista<span>.ar</span></h1>
+        <div className='logo_container'>
+          <CarouselHome />
+          <h1 className="logo_big">
+            Superlista<span>.ar</span>
+          </h1>
+        </div>
 
         <Animated
           className="homeBtns_container"
