@@ -28,9 +28,7 @@ const EditNoteModal = ({ product }) => {
       trigger={
         <button className="addNote__btn" type="button">
           <img
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FeditMyListIcon.svg?alt=media&token=10f9b52b-11df-41fa-a751-b39fffd16b76"
-            }
+            src={'assets/img/editMyListIcon.svg'}
             alt="E"
           />
         </button>

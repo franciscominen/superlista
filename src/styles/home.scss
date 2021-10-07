@@ -11,7 +11,7 @@
 
 @keyframes move {
   100% {
-    transform: translateY(-2em);
+    transform: translateY(-1em);
   }
 }
 
@@ -19,14 +19,13 @@
   .home {
     background: white;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     position: absolute;
     top: 0;
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-direction: column;
 
     .logo_container {
@@ -34,7 +33,8 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      transform: translateY(3em);
+      opacity: 0;
+      transform: translateY(5em);
       animation: fade 0.7s ease-in 0.5s forwards, move 1s ease 2s forwards;
       .BrainhubCarousel__container {
         width: 22%;

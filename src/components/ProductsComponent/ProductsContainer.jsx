@@ -15,7 +15,7 @@ const ProductsContainer = () => {
   return (
     <>
       <CategoryFilter />
-      <figure style={{width:'94%', margin:'0 auto', background:'#D2D2D2', height:'1px'}}/>
+      <figure style={{width:'94%', margin:'0 auto', background:'#f8f8f8', height:'1px'}}/>
       <h1 className="products_title">Productos</h1>
       {isLoading ? (
         <Loader />

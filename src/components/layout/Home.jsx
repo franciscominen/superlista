@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <>
       <section className="home">
+        
         <div className='logo_container'>
           <CarouselHome />
           <h1 className="logo_big">
