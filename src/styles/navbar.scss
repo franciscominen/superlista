@@ -36,13 +36,15 @@
         width: 100%;
         margin: 0 16px;
         transition: 0.3s;
-
+        
         .logo_nav {
           position: absolute;
           transition: 0.3s;
           color: $colorPrincipal;
           font-size: 22px;
           letter-spacing: -1px;
+          top: 14px;
+
           span {
             font-weight: 400;
           }

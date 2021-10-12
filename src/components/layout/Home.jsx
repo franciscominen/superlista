@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
+import { StoreContext } from '../../context/StoreProvider';
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
 import CarouselHome from "./CarouselHome";
 
 const Home = () => {
+
+  const { clearList } = useContext(StoreContext)
+
   return (
     <>
       <section className="home">
-        
-        <div className='logo_container'>
+        <div className="logo_container">
           <CarouselHome />
           <h1 className="logo_big">
             Superlista<span>.ar</span>
@@ -24,14 +27,14 @@ const Home = () => {
           animationInDuration={700}
           animationInDelay={3100}
         >
-          <Link to={"/productos"} className="newList_btn">
+          <Link to={"/productos"} className="newList_btn" onClick={clearList}> 
             <img src={"assets/img/newListBtn.svg"} alt="" />
             <p>
               {" "}
               <strong>Crear nueva</strong> lista
             </p>
           </Link>
-          <Link to={"/productos"} className="newList_btn">
+          <Link to={"/mi-lista"} className="newList_btn">
             <img src={"assets/img/continueBtn.svg"} alt="" />
             <p>
               <strong>Continuar</strong> mi lista

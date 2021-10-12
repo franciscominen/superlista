@@ -1,22 +1,11 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 import "../../styles/add-notes-modal.scss";
 import Popup from "reactjs-popup";
 import { StoreContext } from "../../context/StoreProvider";
 import { Animated } from "react-animated-css";
 
-const UseFocus = () => {
-  const htmlElRef = useRef(null);
-  const setFocus = () => {
-    htmlElRef.current && htmlElRef.current.focus();
-  };
-
-  return [htmlElRef, setFocus];
-};
-
 const EditNoteModal = ({ product }) => {
   const { addNote, addProduct, text, setText } = useContext(StoreContext);
-
-  const [input1Ref, setInput1Focus] = UseFocus();
 
   const onAdd = () => {
     addProduct(product);
@@ -57,16 +46,12 @@ const EditNoteModal = ({ product }) => {
               <div className="content">
                 <input
                   className="note_input"
-                  placeholder={product.nota}
+                  placeholder={product.nota.length > 1 ? product.nota : 'Escriba aqui...' }
                   maxlength="200"
                   onChange={(e) => setText(e.target.value)}
-                  ref={input1Ref}
                 />
               </div>
 
-              <button onClick={setInput1Focus()}>
-                focus
-              </button>
             </div>
 
             <button

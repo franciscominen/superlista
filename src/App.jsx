@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.scss';
-import  {BrowserRouter as Router, Switch, Route, useParams} from 'react-router-dom';
+import  {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/layout/Home';
 import MyListContainer from './components/MyListComponent/MyListContainer';
 import Default from './components/layout/Default';
 import StoreProvider from './context/StoreProvider';
 import ProductsContainer from './components/ProductsComponent/ProductsContainer';
+import 'react-slideshow-image/dist/styles.css';
 
 function App() {
   
