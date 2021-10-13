@@ -29,7 +29,7 @@ export default function CategoriesCollapse() {
         >
           <img
             src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FfilterIconWhite.svg?alt=media&token=126f47c5-a571-4973-b12a-84d4b3bcf358"
+              "assets/img/filterIconWhite.svg"
             }
             alt=""
           />

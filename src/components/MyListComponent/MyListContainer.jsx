@@ -3,7 +3,6 @@ import '../../styles/my-list.scss'
 import { StoreContext } from '../../context/StoreProvider'
 import MyListCard from './MyListCard'
 import MyListEmpty from './MyListEmpty'
-import ClearListModal from '../Modals/ClearListModal'
 import ClearListButton from '../Modals/ClearListButton'
 
 const MyListContainer = () => {

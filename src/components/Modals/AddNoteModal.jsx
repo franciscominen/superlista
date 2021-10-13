@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useContext } from "react";
 import "../../styles/add-notes-modal.scss";
 import Popup from "reactjs-popup";
 import { StoreContext } from "../../context/StoreProvider";
@@ -13,13 +13,7 @@ const AddNoteModal = ({ product, notify }) => {
     notify();
   };
 
-  const inputElement = useRef(null);
 
-  useEffect(() => {
-    if (inputElement.current) {
-      inputElement.current.focus();
-    }
-  }, [inputElement.current]);
 
   return (
     <Popup
@@ -27,7 +21,7 @@ const AddNoteModal = ({ product, notify }) => {
         <button className="addNote__btn" type="button">
           <img
             src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FdescriptIcon.svg?alt=media&token=77f745e2-a217-46a4-bb94-d838d6148ebb"
+              "assets/img/addNoteIcon.svg"
             }
             alt="E"
           />
@@ -43,7 +37,7 @@ const AddNoteModal = ({ product, notify }) => {
               <button className="close-btn" onClick={close} type="button">
                 <img
                   src={
-                    "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FcloseIcon.svg?alt=media&token=381af7d8-e5df-458d-958f-ea4ff23ab14c"
+                    "assets/img/closeIcon.svg"
                   }
                   alt="X"
                 />
@@ -59,9 +53,9 @@ const AddNoteModal = ({ product, notify }) => {
                 <input
                   className="note_input"
                   placeholder="Escriba aqui"
-                  maxlength="200"
+                  maxlength="50"
                   onChange={(e) => setText(e.target.value)}
-                  ref={inputElement}
+                  
                 />
               </form>
             </div>

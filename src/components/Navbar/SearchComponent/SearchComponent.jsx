@@ -12,7 +12,7 @@ const UseFocus = () => {
 };
 
 const SearchComponent = () => {
-  const { setSearchTerm, moveTop, searchTerm, clearSearch } =
+  const { setSearchTerm, moveTop, searchTerm } =
     useContext(StoreContext);
 
   const [input1Ref, setInput1Focus] = UseFocus();
@@ -57,7 +57,7 @@ const SearchComponent = () => {
           }}
         >
           <img
-            src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FbtnClearSearch.svg?alt=media&token=62a787d6-6506-49ea-bba6-797fe03e65fd'}
+            src={'assets/img/btnClearSearch.svg'}
             alt="X"
             className="clearSearch_img"
           />

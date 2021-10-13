@@ -28,7 +28,7 @@ const CategoryFilter = () => {
           <h1>Categorías</h1>
           <img
             src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2Fcategorias-static%2Ficon.svg?alt=media&token=8b80513f-0aac-451c-8991-0c36fcd68b28"
+              'assets/img/categoryHomeToggle.svg'
             }
             alt="Ocultar"
             onClick={categoryHandle}
@@ -39,12 +39,15 @@ const CategoryFilter = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          <Animated animationIn='fadeIn' animationInDuration='500'>
-          <Collapse in={isOpen === false} className="categoryButton_container">
-            {categoriesData.map((categoria) => {
-              return <CategoryButton key={categoria.index} cat={categoria} />;
-            })}
-          </Collapse>
+          <Animated animationIn="fadeIn" animationInDuration="500">
+            <Collapse
+              in={isOpen === false}
+              className="categoryButton_container"
+            >
+              {categoriesData.map((categoria) => {
+                return <CategoryButton key={categoria.index} cat={categoria} />;
+              })}
+            </Collapse>
           </Animated>
         )}
       </section>

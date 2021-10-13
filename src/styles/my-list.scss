@@ -31,16 +31,14 @@
         font-size: 18px;
         font-weight: 600;
         color: $colorPrincipal;
-        margin-bottom: -4px;
+        
       }
       p {
         font-size: 16px;
         color: $grisOscuro;
-        overflow-x: scroll;
         width: 185px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+        overflow: scroll;
+        line-height: 0.9;
       }
     }
     .btns_container {

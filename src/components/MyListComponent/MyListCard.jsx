@@ -23,7 +23,7 @@ const MyListCard = ({product}) => {
             <div className='btns_container'>
                 <EditNoteModal product={product}/>
                 <button className='close_btn' onClick={()=>removeProduct(product.id)}>
-                    <img src={'https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FcloseIcon.svg?alt=media&token=381af7d8-e5df-458d-958f-ea4ff23ab14c'} alt="X" />
+                    <img src={'assets/img/closeIcon.svg'} alt="X" />
                 </button>
             </div>
 

@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 import { useParams } from "react-router";
 import CategoryFilter from "../CategoriesComponent/CategoriesHome/CategoryFilter";
 import Loader from "../../utils/Loader";
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import Footer from "../layout/Footer";
 
 const ProductsContainer = () => {
@@ -27,13 +27,14 @@ const ProductsContainer = () => {
             products
               .filter((product) => {
                 // SEARCH
-                if (searchTerm == "") {
+                if (searchTerm === "") {
                   return product;
                 } else if (
                   product.name.toLowerCase().includes(searchTerm.toLowerCase())
                 ) {
                   return product;
                 }
+                return false;
               })
               .filter((product) => {
                 if (product.categoryID === categoria) {
@@ -41,12 +42,14 @@ const ProductsContainer = () => {
                 } else if (categoria === undefined) {
                   return products;
                 }
+                return false;
               })
               .map((product) => (
                 <ProductCard
                   key={product.id}
                   product={product}
                   addProduct={addProduct}
+                  isLoading={isLoading}
                 />
               ))
           )}

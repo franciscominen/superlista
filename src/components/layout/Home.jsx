@@ -43,13 +43,12 @@ const Home = () => {
         </Animated>
 
         <Animated
-          className="homeBtns_container"
           animationIn="fadeIn"
           animationOut="fadeOut"
           isVisible={true}
           animationInDuration={900}
           animationInDelay={3500}
-          className="login-home_container"
+          className="login-home_container homeBtns_container"
         >
           <h2>¿Ya tenés cuenta?</h2>
           <Link to={"/on-work"}>Inciar sesión con Google</Link>

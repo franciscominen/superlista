@@ -8,12 +8,7 @@ const OnWorkComponent = () => {
     <Popup
       trigger={
         <button type="button" style={{ background: "none", border: "none" }}>
-          <img
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FshareIcon.svg?alt=media&token=3be377ab-17db-4ce8-a2e9-2f43de242e0a"
-            }
-            alt=""
-          />
+          <img src={"assets/img/shareIcon.svg"} alt="" />
         </button>
       }
       modal
@@ -44,26 +39,23 @@ const OnWorkComponent = () => {
               Lo sentimos, estamos trabajando en ello.
             </h1>
 
-            
-              <button
-                onClick={close}
-                className=""
-                style={{
-                  background: "#232323",
-                  border: "none",
-                  color:'#F8F8F8',
-                  fontSize:'18px',
-                  fontWeight:'500',
-                  padding: "16px 22px",
-                  borderRadius: "22px",
-                  display:'block',
-                  margin:'22px auto 0 auto'
-                
-                }}
-              >
-                Okey :)
-              </button>
-
+            <button
+              onClick={close}
+              className=""
+              style={{
+                background: "#232323",
+                border: "none",
+                color: "#F8F8F8",
+                fontSize: "18px",
+                fontWeight: "500",
+                padding: "16px 22px",
+                borderRadius: "22px",
+                display: "block",
+                margin: "22px auto 0 auto",
+              }}
+            >
+              Okey :)
+            </button>
           </Animated>
         </>
       )}

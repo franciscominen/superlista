@@ -17,7 +17,7 @@ const EditNoteModal = ({ product }) => {
       trigger={
         <button className="addNote__btn" type="button">
           <img
-            src={'assets/img/editMyListIcon.svg'}
+            src={"assets/img/editMyListIcon.svg"}
             alt="E"
           />
         </button>
@@ -32,7 +32,7 @@ const EditNoteModal = ({ product }) => {
               <button className="close-btn" onClick={close} type="button">
                 <img
                   src={
-                    "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FcloseIcon.svg?alt=media&token=381af7d8-e5df-458d-958f-ea4ff23ab14c"
+                    "assets/img/closeIcon.svg"
                   }
                   alt="X"
                 />
@@ -47,7 +47,7 @@ const EditNoteModal = ({ product }) => {
                 <input
                   className="note_input"
                   placeholder={product.nota.length > 1 ? product.nota : 'Escriba aqui...' }
-                  maxlength="200"
+                  maxlength="50"
                   onChange={(e) => setText(e.target.value)}
                 />
               </div>

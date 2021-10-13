@@ -24,32 +24,32 @@ const CarouselHome = () => {
         <Fade {...fadeProperties}>
           <div className="each-fade">
             <div>
-              <img src={fadeImages[0]} style={{maxWidth:'62px'}}/>
+              <img src={fadeImages[0]} style={{maxWidth:'62px'}} alt=''/>
             </div>
           </div>
           <div className="each-fade">
             <div>
-              <img src={fadeImages[1]} style={{maxWidth:'62px'}}/>
+              <img src={fadeImages[1]} style={{maxWidth:'62px'}} alt=''/>
             </div>
           </div>
           <div className="each-fade">
             <div>
-              <img src={fadeImages[2]} style={{maxWidth:'62px'}}/>
+              <img src={fadeImages[2]} style={{maxWidth:'62px'}} alt=''/>
             </div>
           </div>
           <div className="each-fade">
             <div>
-              <img src={fadeImages[3]} style={{maxWidth:'62px'}}/>
+              <img src={fadeImages[3]} style={{maxWidth:'62px'}} alt=''/>
             </div>
           </div>
           <div className="each-fade">
             <div>
-              <img src={fadeImages[4]} style={{maxWidth:'62px'}}/>
+              <img src={fadeImages[4]} style={{maxWidth:'62px'}} alt=''/>
             </div>
           </div>
           <div className="each-fade">
             <div>
-              <img src={fadeImages[5]} style={{maxWidth:'62px'}}/>
+              <img src={fadeImages[5]} style={{maxWidth:'62px'}} alt=''/>
             </div>
           </div>
         </Fade>

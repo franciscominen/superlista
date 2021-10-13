@@ -7,7 +7,7 @@ import CategoriesCollapse from "../CategoriesComponent/CategoriesCollapse/Catego
 import OnWorkComponent from "./ShareComponent/OnWorkComponent";
 
 const Navbar = () => {
-  const { moveTop, setMoveTop, moveTopClick, clearSearch } =
+  const { moveTop, moveTopClick, clearSearch } =
     useContext(StoreContext);
 
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -75,12 +75,7 @@ const Navbar = () => {
           type="submit"
           className={moveTop ? "search_btn moverArriba" : "search_btn"}
         >
-          <img
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FsearchIcon.svg?alt=media&token=0c0b6eb1-4888-4459-b4db-b0d7718882ef"
-            }
-            alt=""
-          />
+          <img src={"assets/img/searchIcon.svg"} alt="" />
         </button>
 
         {/* BTN BACK */}
@@ -89,7 +84,7 @@ const Navbar = () => {
           className={moveTop ? "search_backBtn" : "search_backBtn moverArriba"}
         >
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FbackArrowIcon.svg?alt=media&token=eee22626-5fbc-4af1-b2f5-c910942c3146"
+            src="assets/img/backArrowIcon.svg"
             alt="<"
             onClick={clearSearch}
           />
