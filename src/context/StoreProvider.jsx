@@ -106,7 +106,7 @@ const StoreProvider = ({ children }) => {
         clearSearch,
         moveTop: moveTop,
         setMoveTop,
-        moveTopClick,
+        moveTopClick
       }}
     >
       {children}

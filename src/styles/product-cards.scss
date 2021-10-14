@@ -23,6 +23,7 @@
 
     .product-card__container {
         height: 140px;
+        width: 100%;
         background-color: $blanco;
         display: flex;
         flex-direction: column;
@@ -30,12 +31,18 @@
         align-items: center;
         border-radius: 20px;
         padding: 8px;
+        opacity: 1;
+        transition: .2s;
+        border: none;
+        &:disabled {
+            opacity: 0.4;
+        }
     
         .btns-card__container {
             width: 100%;
             display: flex;
             justify-content: space-between;
-
+            
             .btn-addProduct {
                 background: none;
                 border: none;
@@ -68,4 +75,5 @@
         }
         
     }
+
 }

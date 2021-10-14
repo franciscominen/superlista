@@ -47,7 +47,7 @@ const EditNoteModal = ({ product }) => {
                 <input
                   className="note_input"
                   placeholder={product.nota.length > 1 ? product.nota : 'Escriba aqui...' }
-                  maxlength="50"
+                  maxLength="45"
                   onChange={(e) => setText(e.target.value)}
                 />
               </div>

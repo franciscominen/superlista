@@ -5,17 +5,24 @@ import ProductCard from "./ProductCard";
 import { useParams } from "react-router";
 import CategoryFilter from "../CategoriesComponent/CategoriesHome/CategoryFilter";
 import Loader from "../../utils/Loader";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 import Footer from "../layout/Footer";
 
 const ProductsContainer = () => {
-  const { products, addProduct, searchTerm, isLoading } = useContext(StoreContext);
+  const { products, addProduct, searchTerm, isLoading } =
+    useContext(StoreContext);
   const { categoria } = useParams();
-  console.log(products);
   return (
     <>
       <CategoryFilter />
-      <figure style={{width:'94%', margin:'0 auto', background:'#f8f8f8', height:'1px'}}/>
+      <figure
+        style={{
+          width: "94%",
+          margin: "0 auto",
+          background: "#f8f8f8",
+          height: "1px",
+        }}
+      />
       <h1 className="products_title">Productos</h1>
       {isLoading ? (
         <Loader />
@@ -60,18 +67,18 @@ const ProductsContainer = () => {
         toastOptions={{
           className: "",
           style: {
-            background: 'rgb(245 245 245 / 97%)',
-            border: '1px solid #D2D2D2',
-            boxSizing: 'border-box',
-            borderRadius: '20px',
-            height:'52px',
-            boxShadow:'none',
-            fontSize:'16px'
+            background: "rgb(245 245 245 / 97%)",
+            border: "1px solid #D2D2D2",
+            boxSizing: "border-box",
+            borderRadius: "20px",
+            height: "52px",
+            boxShadow: "none",
+            fontSize: "16px",
           },
         }}
       />
 
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "../../styles/product-cards.scss";
 import AddNoteModal from "../Modals/AddNoteModal";
 import toast from "react-hot-toast";
 import { Animated } from "react-animated-css";
 import Loader from "../../utils/Loader";
+import { StoreContext } from "../../context/StoreProvider";
 
 const ProductCard = ({ product, addProduct, isLoading }) => {
+  const { cart } = useContext(StoreContext);
+
   const Msg = () => {
     return (
       <p>
@@ -26,38 +29,41 @@ const ProductCard = ({ product, addProduct, isLoading }) => {
     notify();
   };
 
+  console.log(cart.some((cartItem) => cartItem.id === product.id));
+
   return (
-    <Animated
-      animationIn="zoomIn"
-      animationInDuration="300"
-      key={product.id}
-      className="product-card__container"
-    >
-      <div className="btns-card__container">
-        <AddNoteModal product={product} notify={notify} />
+    <Animated animationIn='zoomIn' animationInDuration='250' animationInDelay='250'>
+      <button
+        key={product.id}
+        className="product-card__container"
+        disabled={cart.some((cartItem) => cartItem.id === product.id)}
+      >
+        <div className="btns-card__container">
+          <AddNoteModal product={product} notify={notify} />
 
-        <button
-          className="btn-addProduct"
-          type="button"
-          onClick={() => handleProduct()}
-        >
-          <img src={"assets/img/addIcon.svg"} alt="+" />
-        </button>
-      </div>
+          <button
+            className="btn-addProduct"
+            type="button"
+            onClick={() => handleProduct()}
+          >
+            <img src={"assets/img/addIcon.svg"} alt="+" />
+          </button>
+        </div>
 
-      <div className="cardImg_container">
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <img
-            src={product.img}
-            alt={product.name}
-            className="card-product__img"
-          />
-        )}
-      </div>
+        <div className="cardImg_container">
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <img
+              src={product.img}
+              alt={product.name}
+              className="card-product__img"
+            />
+          )}
+        </div>
 
-      <h2 className="card-product__name">{product.name}</h2>
+        <h2 className="card-product__name">{product.name}</h2>
+      </button>
     </Animated>
   );
 };

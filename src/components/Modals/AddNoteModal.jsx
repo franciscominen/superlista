@@ -53,7 +53,7 @@ const AddNoteModal = ({ product, notify }) => {
                 <input
                   className="note_input"
                   placeholder="Escriba aqui"
-                  maxlength="50"
+                  maxLength="45"
                   onChange={(e) => setText(e.target.value)}
                   
                 />

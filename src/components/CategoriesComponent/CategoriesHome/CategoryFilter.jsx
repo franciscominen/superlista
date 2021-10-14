@@ -39,7 +39,7 @@ const CategoryFilter = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          <Animated animationIn="fadeIn" animationInDuration="500">
+          <Animated animationIn="fadeIn" animationInDuration="250" animationInDelay='250'>
             <Collapse
               in={isOpen === false}
               className="categoryButton_container"
