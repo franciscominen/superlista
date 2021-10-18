@@ -12,6 +12,8 @@ const ProductsContainer = () => {
   const { products, addProduct, searchTerm, isLoading } =
     useContext(StoreContext);
   const { categoria } = useParams();
+
+  console.log(products)
   return (
     <>
       <CategoryFilter />

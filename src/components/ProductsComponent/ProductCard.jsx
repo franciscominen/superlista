@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "../../styles/product-cards.scss";
 import AddNoteModal from "../Modals/AddNoteModal";
 import toast from "react-hot-toast";
@@ -29,10 +29,8 @@ const ProductCard = ({ product, addProduct, isLoading }) => {
     notify();
   };
 
-  console.log(cart.some((cartItem) => cartItem.id === product.id));
-
   return (
-    <Animated animationIn='zoomIn' animationInDuration='250' animationInDelay='250'>
+    <Animated animationIn='zoomIn' animationInDuration='250'>
       <button
         key={product.id}
         className="product-card__container"
@@ -46,7 +44,7 @@ const ProductCard = ({ product, addProduct, isLoading }) => {
             type="button"
             onClick={() => handleProduct()}
           >
-            <img src={"assets/img/addIcon.svg"} alt="+" />
+            <img src={"https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FaddIcon.svg?alt=media&token=a3cbf288-fd89-4586-a628-ffd80fd1815d"} alt="+" />
           </button>
         </div>
 

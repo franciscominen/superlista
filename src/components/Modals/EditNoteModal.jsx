@@ -3,6 +3,7 @@ import "../../styles/add-notes-modal.scss";
 import Popup from "reactjs-popup";
 import { StoreContext } from "../../context/StoreProvider";
 import { Animated } from "react-animated-css";
+import TextareaAutosize from "react-textarea-autosize";
 
 const EditNoteModal = ({ product }) => {
   const { addNote, addProduct, text, setText } = useContext(StoreContext);
@@ -16,10 +17,7 @@ const EditNoteModal = ({ product }) => {
     <Popup
       trigger={
         <button className="addNote__btn" type="button">
-          <img
-            src={"assets/img/editMyListIcon.svg"}
-            alt="E"
-          />
+          <img src={"assets/img/editMyListIcon.svg"} alt="E" />
         </button>
       }
       modal
@@ -30,12 +28,7 @@ const EditNoteModal = ({ product }) => {
           <Animated animationIn="zoomIn" animationInDuration="500">
             <div className="modal">
               <button className="close-btn" onClick={close} type="button">
-                <img
-                  src={
-                    "assets/img/closeIcon.svg"
-                  }
-                  alt="X"
-                />
+                <img src={"assets/img/closeIcon.svg"} alt="X" />
               </button>
 
               <div className="header">
@@ -44,14 +37,19 @@ const EditNoteModal = ({ product }) => {
               </div>
 
               <div className="content">
-                <input
+                <TextareaAutosize
+                  autoFocus
+                  cols="1"
+                  rows="1"
+                  data-min-rows="1"
                   className="note_input"
-                  placeholder={product.nota.length > 1 ? product.nota : 'Escriba aqui...' }
+                  placeholder={
+                    product.nota.length > 1 ? product.nota : "Escriba aqui..."
+                  }
                   maxLength="45"
                   onChange={(e) => setText(e.target.value)}
                 />
               </div>
-
             </div>
 
             <button

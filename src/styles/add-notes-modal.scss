@@ -1,98 +1,97 @@
 @import "../App.scss";
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
+  .addNote__btn {
+    background: none;
+    border: none;
+  }
 
-    .addNote__btn {
+  .modal-img__myList {
+    max-width: 21px;
+  }
+  .popup-content {
+    background: #27272777;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+
+    .modal {
+      background: $blanco;
+      position: relative;
+      width: 85%;
+      margin: auto;
+      padding: 24px 36px;
+      top: 2em;
+      border-radius: 35px;
+
+      .close-btn {
+        position: absolute;
         background: none;
         border: none;
-    }
-
-    .modal-img__myList {
-        max-width: 21px;
-    }
-    .popup-content {
-        background: #27272777;
-        margin: 0;
-        width: 100%;
-        height: 100vh;
-
-        .modal {
-            background: $blanco;
-            position: relative;
-            width: 85%;
-            margin: auto;
-            padding: 24px 36px;
-            top: 2em;
-            border-radius: 35px;
-
-            .close-btn {
-                position: absolute;
-                background: none;
-                border: none;
-                right: 20px;
-                top: 20px;
-                img {
-                    max-width: 21px;
-                }
-            }
-
-            .header {
-                display: flex;
-                align-items: center;
-                margin-bottom: 16px;
-                img {
-                    max-width: 52px;
-                }
-                h1 {
-                    color: $colorPrincipal;
-                    font-size: 22px;
-                    font-weight: 600;
-                    margin-left: 8px;
-                }
-            }
-
-            .content {
-                margin: auto;
-               
-                .note_input {
-                    background: none;
-                    border: none;
-                    border-bottom: 1px solid $grisOscuro;
-                    border-radius: 0;
-                    padding: 8px 0;
-                    width: 100%;
-                    color: $colorPrincipal;
-                    font-size: 18px;
-                    font-weight: 600;
-                    &::placeholder {
-                        color: $grisOscuro;
-                        font-size: 18px;
-                        font-weight: 500;
-                    }
-                }
-            }
+        right: 20px;
+        top: 20px;
+        img {
+          max-width: 21px;
         }
+      }
 
-        .addNoteList_btn {
-            width: 200px;
-            height: 45px;
-            margin: auto;
-            position: absolute;
-            top: 11em;
-            left: 0;
-            right: 0;
-            border: none;
-            border-radius: 24px;
-            background: $colorPrincipal;
-            color: $blanco;
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        img {
+          max-width: 52px;
+        }
+        h1 {
+          color: $colorPrincipal;
+          font-size: 22px;
+          font-weight: 600;
+          margin-left: 8px;
+        }
+      }
+
+      .content {
+        margin: auto;
+
+        .note_input {
+          background: none;
+          border: none;
+          border-bottom: 1px solid $grisOscuro;
+          border-radius: 0;
+          padding: 6px 0;
+          width: 100%;
+          color: $colorPrincipal;
+          font-size: 18px;
+          font-weight: 600;
+          resize: none;
+
+          &::placeholder {
+            color: $grisOscuro;
             font-size: 18px;
             font-weight: 500;
-           
-            span { 
-                height: 20px;
-                
-            }
-            
+          }
         }
+      }
     }
+
+    .addNoteList_btn {
+      width: 200px;
+      height: 45px;
+      margin: auto;
+      position: absolute;
+      top: 12em;
+      left: 0;
+      right: 0;
+      border: none;
+      border-radius: 24px;
+      background: $colorPrincipal;
+      color: $blanco;
+      font-size: 18px;
+      font-weight: 500;
+
+      span {
+        height: 20px;
+      }
+    }
+  }
 }

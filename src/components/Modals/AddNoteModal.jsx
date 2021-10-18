@@ -3,6 +3,7 @@ import "../../styles/add-notes-modal.scss";
 import Popup from "reactjs-popup";
 import { StoreContext } from "../../context/StoreProvider";
 import { Animated } from "react-animated-css";
+import TextareaAutosize from "react-textarea-autosize";
 
 const AddNoteModal = ({ product, notify }) => {
   const { addNote, addProduct, text, setText } = useContext(StoreContext);
@@ -13,15 +14,13 @@ const AddNoteModal = ({ product, notify }) => {
     notify();
   };
 
-
-
   return (
     <Popup
       trigger={
         <button className="addNote__btn" type="button">
           <img
             src={
-              "assets/img/addNoteIcon.svg"
+              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FdescriptIcon.svg?alt=media&token=77f745e2-a217-46a4-bb94-d838d6148ebb"
             }
             alt="E"
           />
@@ -35,12 +34,7 @@ const AddNoteModal = ({ product, notify }) => {
           <Animated animationIn="zoomIn" animationInDuration="500">
             <div className="modal">
               <button className="close-btn" onClick={close} type="button">
-                <img
-                  src={
-                    "assets/img/closeIcon.svg"
-                  }
-                  alt="X"
-                />
+                <img src={"assets/img/closeIcon.svg"} alt="X" />
               </button>
 
               <div className="header">
@@ -49,13 +43,15 @@ const AddNoteModal = ({ product, notify }) => {
               </div>
 
               <form className="content">
-   
-                <input
+                <TextareaAutosize
+                  autoFocus
+                  cols="1"
+                  rows="1"
+                  data-min-rows="1"
                   className="note_input"
                   placeholder="Escriba aqui"
                   maxLength="45"
                   onChange={(e) => setText(e.target.value)}
-                  
                 />
               </form>
             </div>

@@ -83,10 +83,6 @@ const storeReducer = (state, action) => {
         products: productsFilter,
       };
     }
-    // Lograr la comprobacion, si el producto esta en carrito, disabled debe ser true. Despes haces el condicional en el className/style
-    case "PRODUCT_DISABLED": {
-
-    }
 
     default:
       return state;
