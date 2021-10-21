@@ -10,26 +10,86 @@
     z-index: 10;
 
     .slide-container {
-      margin-top: 10%;
+      margin-top: 32px;
       .howToUse_card {
-        width: 90%;
-        height: 80vh;
-        margin: auto;
+        width: 85%;
+        height: 27em;
+        margin: 0 auto;
         background-color: #abffa9;
         border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .cardHow_close {
+          position: relative;
+          bottom: 0.5em;
+          align-self: flex-end;
+        }
+        .cardText_container {
+          display: flex;
+          flex-direction: column;
+          height: 90%;
+          align-items: center;
+          justify-content: flex-start;
+
+          .cardHow_title {
+            font-size: 18px;
+            color: $colorPrincipal;
+          }
+          .cardHow_text {
+            text-align: center;
+            font-size: 17px;
+            font-weight: 400;
+          }
+          .comenzar_btn {
+            color: $colorPrincipal;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background-color: $blanco;
+            width: 100%;
+            border-radius: 20px;
+            padding: 16px 0;
+          }
+        }
       }
     }
   }
-
 }
-.react-slideshow-container+ul.indicators li {
-    margin-top: 16px;
-    width: 38px;
+// ARROWS
+.react-slideshow-container .default-nav:first-of-type {
+  opacity: 0;
+  height: 23em;
+  border-radius: 0;
+  width: 6em;
+  background: gray;
+  position: fixed;
+  left: 0;
 }
-.react-slideshow-container+ul.indicators .each-slideshow-indicator::before {
-    border-radius: 0;
-    width: 26px;
-    height: 12px;
-    margin: 0 8px;
-    border-radius: 6px;
+.react-slideshow-container .default-nav:last-of-type {
+  opacity: 0;
+  height: 23em;
+  border-radius: 0;
+  width: 6em;
+  background: gray;
+  position: fixed;
+  right: 0;
+}
+// INDICATORS
+.react-slideshow-container + ul.indicators li {
+  margin-top: 22px;
+  width: 38px;
+}
+.react-slideshow-container + ul.indicators .each-slideshow-indicator::before {
+  border-radius: 0;
+  width: 26px;
+  height: 12px;
+  margin: 0 8px;
+  border-radius: 6px;
+}
+.react-slideshow-container + ul.indicators .each-slideshow-indicator::before {
+  background-color: $grisOscuro;
 }

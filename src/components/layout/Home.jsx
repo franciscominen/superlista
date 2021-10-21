@@ -3,6 +3,7 @@ import { StoreContext } from "../../context/StoreProvider";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
+import ConfirmNewListModal from "../Modals/ConfirmNewListModal";
 
 const Home = () => {
   const { clearList } = useContext(StoreContext);
@@ -10,8 +11,6 @@ const Home = () => {
   return (
     <>
       <section className="home">
-
-        <img src="/assets/img/homeColors.svg" alt="" style={{position:'absolute', bottom:'0'}}/>
         <div className="logo_container">
           <h1 className="logo_big">
             Superlista<span>.ar</span>
@@ -40,13 +39,8 @@ const Home = () => {
           animationInDuration={700}
           animationInDelay={3100}
         >
-          <Link to={"/productos"} className="newList_btn" onClick={clearList}>
-            <img src={"assets/img/newListBtn.svg"} alt="" />
-            <p>
-              {" "}
-              <strong>Crear nueva</strong> lista
-            </p>
-          </Link>
+          <ConfirmNewListModal/>
+          
           <Link to={"/mi-lista"} className="newList_btn">
             <img src={"assets/img/continueBtn.svg"} alt="" />
             <p>

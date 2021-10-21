@@ -23,7 +23,7 @@ const OnWorkComponent = () => {
               background: "white",
               borderRadius: "35px",
               width: "75%",
-              padding: "24px",
+              padding: "16px",
               position: "relative",
               top: "30%",
               margin: "auto",
@@ -31,30 +31,34 @@ const OnWorkComponent = () => {
           >
             <h1
               style={{
-                fontSize: "22px",
+                fontSize: "23px",
                 textAlign: "center",
-                color: "#8D8D8D",
+                color: "#232323",
+                padding:'16px',
+                lineHeight:'1.2'
               }}
             >
-              Lo sentimos, estamos trabajando en ello.
+              Estamos trabajando para que puedas compartir tu lista.
             </h1>
 
             <button
               onClick={close}
               className=""
               style={{
-                background: "#232323",
-                border: "none",
-                color: "#F8F8F8",
-                fontSize: "18px",
-                fontWeight: "500",
+                background: "#D2D2D2",
+                color: "#8D8D8D",
+                fontSize: "22px",
+                fontWeight: "700",
                 padding: "16px 22px",
+                border:'2px solid #D2D2D2',
                 borderRadius: "22px",
                 display: "block",
-                margin: "22px auto 0 auto",
+                margin: "8px auto 16px auto",
+                width:'85%',
+                
               }}
             >
-              Okey :)
+              OKIS
             </button>
           </Animated>
         </>

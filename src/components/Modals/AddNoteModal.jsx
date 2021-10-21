@@ -14,6 +14,32 @@ const AddNoteModal = ({ product, notify }) => {
     notify();
   };
 
+  const placeholderHandler = () => {
+    if (product.categoryID === 'verduleria') {
+      return "Peso, cantidad y/o color.";
+    } else if (product.categoryID === 'carnes') {
+      return "Corte y/u opción veggie.";
+    } else if (product.categoryID === 'pastas') {
+      return "Peso, cantidad y/o sabor.";
+    }else if (product.categoryID === 'panaderia') {
+      return "Peso, cantidad y/o sabor.";
+    }else if (product.categoryID === 'junk-food') {
+      return "Marca, cantidad y/o tamaño.";
+    }else if (product.categoryID === 'lacteos') {
+      return "Marca, cantidad y/o tipo.";
+    }else if (product.categoryID === 'bebidas') {
+      return "Marca, cantidad y/o tamaño.";
+    }else if (product.categoryID === 'cosmetica') {
+      return "Marca, cantidad y/o tamaño.";
+    }else if (product.categoryID === 'despensa') {
+      return "Marca, cantidad y/o tamaño.";
+    }else if (product.categoryID === 'limpieza') {
+      return "Marca y/o tipo de producto.";
+    } else {
+      return null;
+    }
+  }
+
   return (
     <Popup
       trigger={
@@ -54,7 +80,7 @@ const AddNoteModal = ({ product, notify }) => {
                   rows="1"
                   data-min-rows="1"
                   className="note_input"
-                  placeholder="Escriba aqui"
+                  placeholder={placeholderHandler()}
                   maxLength="45"
                   onChange={(e) => setText(e.target.value)}
                 />

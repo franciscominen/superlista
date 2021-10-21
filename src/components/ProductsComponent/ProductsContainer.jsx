@@ -21,7 +21,7 @@ const ProductsContainer = () => {
         style={{
           width: "94%",
           margin: "0 auto",
-          background: "#f8f8f8",
+          background: "#e3e3e3",
           height: "1px",
         }}
       />
