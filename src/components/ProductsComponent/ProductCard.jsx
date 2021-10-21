@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../../styles/product-cards.scss";
 import AddNoteModal from "../Modals/AddNoteModal";
 import toast from "react-hot-toast";
@@ -7,7 +7,11 @@ import Loader from "../../utils/Loader";
 import { StoreContext } from "../../context/StoreProvider";
 
 const ProductCard = ({ product, addProduct, isLoading }) => {
-  const { cart } = useContext(StoreContext);
+  const { cart, removeProduct } = useContext(StoreContext);
+  const [disabled, setDisabled] = useState(false);
+
+  let isInMyList = cart.some((cartItem) => cartItem.id === product.id);
+  console.log(isInMyList);
 
   const Msg = () => {
     return (
@@ -30,7 +34,7 @@ const ProductCard = ({ product, addProduct, isLoading }) => {
   };
 
   return (
-    <Animated animationIn='zoomIn' animationInDuration='250'>
+    <Animated animationIn="zoomIn" animationInDuration="250">
       <button
         key={product.id}
         className="product-card__container"
@@ -39,13 +43,34 @@ const ProductCard = ({ product, addProduct, isLoading }) => {
         <div className="btns-card__container">
           <AddNoteModal product={product} notify={notify} />
 
-          <button
-            className="btn-addProduct"
-            type="button"
-            onClick={() => handleProduct()}
-          >
-            <img src={"https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FaddIcon.svg?alt=media&token=a3cbf288-fd89-4586-a628-ffd80fd1815d"} alt="+" />
-          </button>
+          {disabled ? (
+            <button
+              className="btn-addProduct"
+              type="button"
+              onClick={() => handleProduct()}
+            >
+              <img
+                onClick={() => removeProduct(product.id)}
+                src={
+                  "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FremoveProductCard.svg?alt=media&token=04d8c215-2b15-406d-be84-5037cf0c36f5"
+                }
+                alt="-"
+              />
+            </button>
+          ) : (
+            <button
+              className="btn-addProduct"
+              type="button"
+              onClick={() => handleProduct()}
+            >
+              <img
+                src={
+                  "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FaddIcon.svg?alt=media&token=a3cbf288-fd89-4586-a628-ffd80fd1815d"
+                }
+                alt="+"
+              />
+            </button>
+          )}
         </div>
 
         <div className="cardImg_container">

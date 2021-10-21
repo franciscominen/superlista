@@ -1,0 +1,35 @@
+@import "../App.scss";
+
+@media (max-width: 900px) {
+  .howToUse_wrapper {
+    background: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+
+    .slide-container {
+      margin-top: 10%;
+      .howToUse_card {
+        width: 90%;
+        height: 80vh;
+        margin: auto;
+        background-color: #abffa9;
+        border-radius: 20px;
+      }
+    }
+  }
+
+}
+.react-slideshow-container+ul.indicators li {
+    margin-top: 16px;
+    width: 38px;
+}
+.react-slideshow-container+ul.indicators .each-slideshow-indicator::before {
+    border-radius: 0;
+    width: 26px;
+    height: 12px;
+    margin: 0 8px;
+    border-radius: 6px;
+}

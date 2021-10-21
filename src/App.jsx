@@ -8,6 +8,7 @@ import Default from './components/layout/Default';
 import StoreProvider from './context/StoreProvider';
 import ProductsContainer from './components/ProductsComponent/ProductsContainer';
 import 'react-slideshow-image/dist/styles.css';
+import HowToUse from './components/layout/HowToUse';
 
 function App() {
   
@@ -26,6 +27,7 @@ function App() {
           <Route exact component={ProductsContainer} path="/productos" />
           <Route exact component={MyListContainer} path="/mi-lista" />
           <Route exact component={Default} path="/on-work" />
+          <Route exact component={HowToUse} path="/how-to-use" />
 
         </Switch>
 
