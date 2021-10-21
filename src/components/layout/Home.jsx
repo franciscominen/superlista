@@ -1,13 +1,12 @@
-import React, {useContext} from "react";
-import { StoreContext } from '../../context/StoreProvider';
+import React, { useContext } from "react";
+import { StoreContext } from "../../context/StoreProvider";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
 import CarouselHome from "./CarouselHome";
 
 const Home = () => {
-
-  const { clearList } = useContext(StoreContext)
+  const { clearList } = useContext(StoreContext);
 
   return (
     <>
@@ -20,6 +19,19 @@ const Home = () => {
         </div>
 
         <Animated
+          animationIn="zoomIn"
+          animationOut="fadeOut"
+          isVisible={true}
+          animationInDuration={700}
+          animationInDelay={3100}
+        >
+          <h1 className="title_desktop">
+            ¡Perdón! Por el momento solo vas a poder sacarme provecho desde
+            cualquier dispositivo móvil :(
+          </h1>
+        </Animated>
+
+        <Animated
           className="homeBtns_container"
           animationIn="zoomIn"
           animationOut="fadeOut"
@@ -27,7 +39,7 @@ const Home = () => {
           animationInDuration={700}
           animationInDelay={3100}
         >
-          <Link to={"/productos"} className="newList_btn" onClick={clearList}> 
+          <Link to={"/productos"} className="newList_btn" onClick={clearList}>
             <img src={"assets/img/newListBtn.svg"} alt="" />
             <p>
               {" "}

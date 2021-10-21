@@ -15,6 +15,62 @@
   }
 }
 
+// DESKTOP
+.home {
+  background: white;
+  width: 100%;
+  height: 85vh;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .title_desktop {
+    color: $colorPrincipal;
+    margin-top: 1em;
+    font-weight: 700;
+    width: 25em;
+    text-align: center;
+    font-size: 33px;
+  }
+  .logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(5em);
+    animation: fade 0.7s ease-in 0.5s forwards, move 1s ease 2s forwards;
+    .BrainhubCarousel__container {
+      width: 22%;
+      overflow: hidden;
+      img {
+        width: 74px;
+      }
+    }
+    .logo_big {
+      font-size: 36px;
+      color: $colorPrincipal;
+      letter-spacing: -1px;
+      position: relative;
+      margin-left: 8px;
+      top: 5px;
+      opacity: 1;
+
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .homeBtns_container {
+    display: none;
+  }
+}
+
+// RESPONSIVE
 @media (max-width: 900px) {
   .home {
     background: white;
@@ -27,7 +83,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    .title_desktop {
+      display: none;
+    }
     .logo_container {
       display: flex;
       justify-content: center;

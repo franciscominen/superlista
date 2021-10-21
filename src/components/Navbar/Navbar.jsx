@@ -60,7 +60,7 @@ const Navbar = () => {
     backgroundColor: "#F8F8F8",
     textAlign: "center",
     transition: "top 0.3s",
-    borderRadius: "0 0 30px 30px",
+    borderRadius: "0 0 26px 26px"
   };
 
   return (
