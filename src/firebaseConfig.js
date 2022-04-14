@@ -10,7 +10,7 @@ var firebaseConfig = {
   storageBucket: "lista-super-app.appspot.com",
   messagingSenderId: "435567422333",
   appId: "1:435567422333:web:015bbebddc89e553e63a14",
-  measurementId: "G-VQBFTSPTR4",
+  measurementId: "G-MCBFPCCZN5",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
