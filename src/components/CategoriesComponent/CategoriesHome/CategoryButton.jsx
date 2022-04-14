@@ -9,6 +9,7 @@ const CategoryButton = ({ cat }) => {
       to={link}
       className="catButton_container"
       activeClassName="catButton_container-active"
+      id="RouterNavLink"
     >
       <div className="catImg_container">
         <img src={img} alt={title} className="category_img" />

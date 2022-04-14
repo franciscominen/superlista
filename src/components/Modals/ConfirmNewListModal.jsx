@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
@@ -24,7 +24,7 @@ const ConfirmNewListModal = () => {
         <>
           <Animated
             animationIn="zoomIn"
-            animationInDuration="500"
+            animationInDuration={500}
             style={{
               display: "flex",
               flexDirection: "column",

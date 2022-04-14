@@ -25,7 +25,7 @@ const EditNoteModal = ({ product }) => {
     >
       {(close) => (
         <>
-          <Animated animationIn="zoomIn" animationInDuration="500">
+          <Animated animationIn="zoomIn" animationInDuration={500}>
             <div className="modal">
               <button className="close-btn" onClick={close} type="button">
                 <img src={"assets/img/closeIcon.svg"} alt="X" />

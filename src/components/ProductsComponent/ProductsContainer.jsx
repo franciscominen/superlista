@@ -13,7 +13,6 @@ const ProductsContainer = () => {
     useContext(StoreContext);
   const { categoria } = useParams();
 
-  console.log(products)
   return (
     <>
       <CategoryFilter />

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "../../styles/product-cards.scss";
 import AddNoteModal from "../Modals/AddNoteModal";
 import toast from "react-hot-toast";
@@ -8,10 +8,7 @@ import { StoreContext } from "../../context/StoreProvider";
 
 const ProductCard = ({ product, addProduct, isLoading }) => {
   const { cart, removeProduct } = useContext(StoreContext);
-  const [disabled, setDisabled] = useState(false);
-
-  let isInMyList = cart.some((cartItem) => cartItem.id === product.id);
-  console.log(isInMyList);
+  let disabled = false;
 
   const Msg = () => {
     return (
@@ -34,7 +31,7 @@ const ProductCard = ({ product, addProduct, isLoading }) => {
   };
 
   return (
-    <Animated animationIn="zoomIn" animationInDuration="250">
+    <Animated animationIn="zoomIn" animationInDuration={250}>
       <button
         key={product.id}
         className="product-card__container"

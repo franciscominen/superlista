@@ -1,13 +1,10 @@
-import React, { useContext } from "react";
-import { StoreContext } from "../../context/StoreProvider";
+import React from "react";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
 import ConfirmNewListModal from "../Modals/ConfirmNewListModal";
 
 const Home = () => {
-  const { clearList } = useContext(StoreContext);
-
   return (
     <>
       <section className="home">
@@ -39,8 +36,8 @@ const Home = () => {
           animationInDuration={700}
           animationInDelay={3100}
         >
-          <ConfirmNewListModal/>
-          
+          <ConfirmNewListModal />
+
           <Link to={"/mi-lista"} className="newList_btn">
             <img src={"assets/img/continueBtn.svg"} alt="" />
             <p>

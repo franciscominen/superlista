@@ -18,7 +18,7 @@ const OnWorkComponent = () => {
         <>
           <Animated
             animationIn="zoomIn"
-            animationInDuration="400"
+            animationInDuration={400}
             style={{
               background: "white",
               borderRadius: "35px",
@@ -34,8 +34,8 @@ const OnWorkComponent = () => {
                 fontSize: "23px",
                 textAlign: "center",
                 color: "#232323",
-                padding:'16px',
-                lineHeight:'1.2'
+                padding: "16px",
+                lineHeight: "1.2",
               }}
             >
               Estamos trabajando para que puedas compartir tu lista.
@@ -50,12 +50,11 @@ const OnWorkComponent = () => {
                 fontSize: "22px",
                 fontWeight: "700",
                 padding: "16px 22px",
-                border:'2px solid #D2D2D2',
+                border: "2px solid #D2D2D2",
                 borderRadius: "22px",
                 display: "block",
                 margin: "8px auto 16px auto",
-                width:'85%',
-                
+                width: "85%",
               }}
             >
               OKIS

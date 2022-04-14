@@ -15,49 +15,49 @@ const AddNoteModal = ({ product, notify }) => {
   };
 
   const placeholderHandler = () => {
-    if (product.categoryID === 'verduleria') {
+    if (product.categoryID === "verduleria") {
       return "Peso, cantidad y/o color.";
-    } else if (product.categoryID === 'carnes') {
+    } else if (product.categoryID === "carnes") {
       return "Corte y/u opción veggie.";
-    } else if (product.categoryID === 'pastas') {
+    } else if (product.categoryID === "pastas") {
       return "Peso, cantidad y/o sabor.";
-    }else if (product.categoryID === 'panaderia') {
+    } else if (product.categoryID === "panaderia") {
       return "Peso, cantidad y/o sabor.";
-    }else if (product.categoryID === 'junk-food') {
+    } else if (product.categoryID === "junk-food") {
       return "Marca, cantidad y/o tamaño.";
-    }else if (product.categoryID === 'lacteos') {
+    } else if (product.categoryID === "lacteos") {
       return "Marca, cantidad y/o tipo.";
-    }else if (product.categoryID === 'bebidas') {
+    } else if (product.categoryID === "bebidas") {
       return "Marca, cantidad y/o tamaño.";
-    }else if (product.categoryID === 'cosmetica') {
+    } else if (product.categoryID === "cosmetica") {
       return "Marca, cantidad y/o tamaño.";
-    }else if (product.categoryID === 'despensa') {
+    } else if (product.categoryID === "despensa") {
       return "Marca, cantidad y/o tamaño.";
-    }else if (product.categoryID === 'limpieza') {
+    } else if (product.categoryID === "limpieza") {
       return "Marca y/o tipo de producto.";
     } else {
       return null;
     }
-  }
+  };
 
   return (
     <Popup
       trigger={
-        <button className="addNote__btn" type="button">
-          <img
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FdescriptIcon.svg?alt=media&token=77f745e2-a217-46a4-bb94-d838d6148ebb"
-            }
-            alt="E"
-          />
-        </button>
+        <img
+          src={
+            "https://firebasestorage.googleapis.com/v0/b/lista-super-app.appspot.com/o/assets%2FdescriptIcon.svg?alt=media&token=77f745e2-a217-46a4-bb94-d838d6148ebb"
+          }
+          alt="E"
+          className="addNote__btn"
+          type="button"
+        />
       }
       modal
       nested
     >
       {(close) => (
         <>
-          <Animated animationIn="zoomIn" animationInDuration="500">
+          <Animated animationIn="zoomIn" animationInDuration={500}>
             <div className="modal">
               <button className="close-btn" onClick={close} type="button">
                 <img

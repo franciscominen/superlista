@@ -27,9 +27,7 @@ const CategoryFilter = () => {
         <div className="title_container">
           <h1>Categorías</h1>
           <img
-            src={
-              'assets/img/categoryHomeToggle.svg'
-            }
+            src={"assets/img/categoryHomeToggle.svg"}
             alt="Ocultar"
             onClick={categoryHandle}
             className={rotate ? "rotate" : ""}
@@ -39,13 +37,13 @@ const CategoryFilter = () => {
         {isLoading ? (
           <Loader />
         ) : (
-          <Animated animationIn="fadeIn" animationInDuration="250">
+          <Animated animationIn="fadeIn" animationInDuration={250}>
             <Collapse
               in={isOpen === false}
               className="categoryButton_container"
             >
               {categoriesData.map((categoria) => {
-                return <CategoryButton key={categoria.index} cat={categoria} />;
+                return <CategoryButton key={categoria.id} cat={categoria} />;
               })}
             </Collapse>
           </Animated>
